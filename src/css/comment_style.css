@@ -22,13 +22,13 @@ section.message h2 {
 }
   
   section.message ol {
-    max-width: 80%;
+    max-width: 50%;
     margin: 0 auto;
  }
 
   section.message ol li {
     padding: 2%;
-    margin-bottom:10%;
+    margin-bottom:5%;
     border-bottom: 1px solid #DDD; 
     font-size: 20px;
     word-wrap:break-word;  
