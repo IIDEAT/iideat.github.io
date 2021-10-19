@@ -10,7 +10,7 @@ var query = new AV.Query('Message');
       
       array.forEach((yyy =>{
           let li = document.createElement('li')
-          li.innerText = yyy.name +':'+yyy.content;
+          li.innerText = yyy.name +' : '+yyy.content;
           let messageList = document.querySelector('#messageList')
           messageList.appendChild(li)
       }))
@@ -30,7 +30,7 @@ myForm.addEventListener('submit',(e)=>{
          'content': content
       }).then((object)=>{
           let li = document.createElement('li')
-          li.innerText = `${object.attributes.name}:${object.attributes.content}`
+          li.innerText = `${object.attributes.name} : ${object.attributes.content}`
           let messageList = document.querySelector('#messageList')
           messageList.appendChild(li)
           myForm.querySelector('input[name=name]').value = ''
