@@ -1,7 +1,7 @@
 AV.init({
   appId: "1wFqGRggvkflvsHK71yBeoLp-gzGzoHsz",
   appKey: "wHzWdO649dBr7q09CuunEv5i",
-  serverURL: "https://iideat.github.io/"
+  serverURL: "https://1wfqgrgg.lc-cn-n1-shared.com"
 });
 
 AV.init({
