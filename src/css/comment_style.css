@@ -27,7 +27,7 @@ section.message h2 {
  }
 
   section.message ol li {
-    padding: 1%;
+    padding: 2%;
     border-bottom: 1px solid #DDD; 
     font-size: 20px;
 }
