@@ -28,7 +28,9 @@ section.message h2 {
 
   section.message ol li {
     padding: 2%;
-    margin-bottom:20%;
+    margin-bottom:10%;
     border-bottom: 1px solid #DDD; 
     font-size: 20px;
+    word-wrap:break-word;  
+    word-break:break-all;
 }
