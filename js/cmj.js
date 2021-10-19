@@ -4,10 +4,7 @@ AV.init({
   serverURL: "https://1wfqgrgg.lc-cn-n1-shared.com"
 });
 
-AV.init({
-    appId: APP_ID,
-    appKey: APP_KEY
-});
+
 
 var query = new AV.Query('Message');
   query.find().then( (messages)=> {
