@@ -19,9 +19,9 @@ var query = new AV.Query('zhuoban');
           li.innerText = "作\xa0\xa0\xa0\xa0\xa0\xa0者：" + yyy.author;
           ul.appendChild(li);
           let li2 = document.createElement('li')
-          var score = Math.round((yyy.nandu + yyy.suiji + yyy.yule + yyy.celue + yyy.dairu + yyy.hudong + yyy.meishu) / 7 * 100) / 100;
+          var score = ((yyy.nandu + yyy.suiji + yyy.yule + yyy.celue + yyy.dairu + yyy.hudong + yyy.meishu) / 7 ).toFixed(2);
           console.log(score);
-          li2.innerText = "桌瓣评分：" + toString(score);
+          li2.innerText = "桌瓣评分：" + score.toSring();
           ul.appendChild(li2);
           a.rel = 'src/pic/' + yyy.name + '.png'
           console.log(a.rel)
