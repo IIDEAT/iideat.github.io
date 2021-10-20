@@ -18,8 +18,9 @@ var query = new AV.Query('zhuoban');
           let li = document.createElement('li')
           li.innerText = "作\xa0\xa0\xa0\xa0\xa0\xa0者：" + yyy.author;
           ul.appendChild(li);
-          li.innerText = "桌瓣评分：";
-          ul.appendChild(li);
+          let li2 = document.createElement('li')
+          li2.innerText = "桌瓣评分：";
+          ul.appendChild(li2);
           a.rel = 'src/pic/' + yyy.name + '.png'
           console.log(a.rel)
           a.href = 'http://sc.chinaz.com/'
