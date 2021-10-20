@@ -1,15 +1,15 @@
 var imf = function(){
 	var lf = 0;
 	var instances = [];
-	
+
 	function getElementsByClass(object, tag, className){
 		var o = object.getElementsByTagName(tag);
 		for (var i = 0, n = o.length, ret = []; i < n; i++)
-		if (o[i].className == className) ret.push(o[i]);
+			if (o[i].className == className) ret.push(o[i]);
 		if (ret.length == 1) ret = ret[0];
 		return ret;
 	}
-		
+
 	function addEvent(o, e, f){
 		if (window.addEventListener) o.addEventListener(e, f, false);
 		else if (window.attachEvent) r = o.attachEvent('on' + e, f);
@@ -23,14 +23,14 @@ var imf = function(){
 		//flx.title = img.title;
 		//flx.replaceChild(document.createTextNode(o.text), this.legend.firstChild);
 		//flx.alt.nodeValue = document.getElementById("text").getAttribute("title");
-		
+
 		/* ---- insert Reflexion 添加倒影换成添加文本---- */
 		flx.style.position = 'absolute';
 		flx.style.left = '-1000px';
 		cont.appendChild(flx);
 		return flx;
 	}
-	
+
 	/* //////////// ==== ImageFlow Constructor 构造==== //////////// */
 	function ImageFlow(oCont, size, zoom, border){
 		this.diapos = [];
@@ -62,75 +62,76 @@ var imf = function(){
 		this.NF = img.length;
 		for (var i = 0, o; o = img[i]; i++) {
 			this.diapos[i] = new Diapo(this, i,
-			o.rel,
-			o.title || '- ' + i + ' -',
-			o.innerHTML || o.rel,
-			o.href || '',
-			o.target || '_self',
-			o.cloneNode(true)
-		);
-	}
-	
-	/* ==== add mouse wheel events 加载鼠标滚轮动作==== */
-	var temp_h1 = document.body.clientHeight;
-	var temp_h2 = document.documentElement.clientHeight;
-	var isXhtml = (temp_h2<=temp_h1&&temp_h2!=0)?true:false; 
-	var htmlbody = isXhtml?document.documentElement:document.body;
+				o.rel,
+				o.title || '- ' + i + ' -',
+				o.innerHTML || o.rel,
+				o.href || '',
+				o.target || '_self',
+				o.cloneNode(true),
+				o.id
+			);
+		}
 
-	if (window.addEventListener)
-		this.oc.addEventListener('DOMMouseScroll', function(e){
-			this.parent.scroll(-e.detail);
-			htmlbody.style.overflow = "hidden";//上下滚动BUG清除
-	}, false);
-	else this.oc.onmousewheel = function(){
-		this.parent.scroll(event.wheelDelta);
-		htmlbody.style.overflow = "hidden";
-		this.onmouseout = function(){
-			htmlbody.style.overflow = "auto";
+		/* ==== add mouse wheel events 加载鼠标滚轮动作==== */
+		var temp_h1 = document.body.clientHeight;
+		var temp_h2 = document.documentElement.clientHeight;
+		var isXhtml = (temp_h2<=temp_h1&&temp_h2!=0)?true:false;
+		var htmlbody = isXhtml?document.documentElement:document.body;
+
+		if (window.addEventListener)
+			this.oc.addEventListener('DOMMouseScroll', function(e){
+				this.parent.scroll(-e.detail);
+				htmlbody.style.overflow = "hidden";//上下滚动BUG清除
+			}, false);
+		else this.oc.onmousewheel = function(){
+			this.parent.scroll(event.wheelDelta);
+			htmlbody.style.overflow = "hidden";
+			this.onmouseout = function(){
+				htmlbody.style.overflow = "auto";
+			}
 		}
-	}
-	
-	/* ==== scrollbar drag N drop 移动==== */
-	this.bar.onmousedown = function(e){
-		if (!e) e = window.event;
-		var scl = e.screenX - this.offsetLeft;
-		var self = this.parent;
-		/* ---- move bar 移动小块---- */
-		this.parent.oc.onmousemove = function(e){
+
+		/* ==== scrollbar drag N drop 移动==== */
+		this.bar.onmousedown = function(e){
 			if (!e) e = window.event;
-			self.bar.style.left = Math.round(Math.min((self.ws - self.arw - self.bw), Math.max(self.alw, e.screenX - scl))) + 'px';
-			self.view = Math.round(((e.screenX - scl)) / (self.ws - self.alw - self.arw - self.bw) * self.NF);
-			if (self.view != self.back) self.calc();
+			var scl = e.screenX - this.offsetLeft;
+			var self = this.parent;
+			/* ---- move bar 移动小块---- */
+			this.parent.oc.onmousemove = function(e){
+				if (!e) e = window.event;
+				self.bar.style.left = Math.round(Math.min((self.ws - self.arw - self.bw), Math.max(self.alw, e.screenX - scl))) + 'px';
+				self.view = Math.round(((e.screenX - scl)) / (self.ws - self.alw - self.arw - self.bw) * self.NF);
+				if (self.view != self.back) self.calc();
+				return false;
+			}
+
+			/* ---- release scrollbar 释放滚动条---- */
+			this.parent.oc.onmouseup = function(e) {
+				self.oc.onmousemove = null;
+				return false;
+			}
 			return false;
 		}
-		
-		/* ---- release scrollbar 释放滚动条---- */
-		this.parent.oc.onmouseup = function(e) {
-			self.oc.onmousemove = null;
-			return false;
-		}
-			return false;
-		}
-		
+
 		/* ==== right arrow 右箭头==== */
 		this.arR.onclick = this.arR.ondblclick = function(){
 			if (this.parent.view < this.parent.NF - 1)
 				this.parent.calc(1);
-			}
-			/* ==== Left arrow 左箭头==== */
-			this.arL.onclick = this.arL.ondblclick = function(){
-				if (this.parent.view > 0)
-				this.parent.calc(-1);
-			}
 		}
-		/* //////////// ==== ImageFlow prototype ==== //////////// */
-		ImageFlow.prototype = {
+		/* ==== Left arrow 左箭头==== */
+		this.arL.onclick = this.arL.ondblclick = function(){
+			if (this.parent.view > 0)
+				this.parent.calc(-1);
+		}
+	}
+	/* //////////// ==== ImageFlow prototype ==== //////////// */
+	ImageFlow.prototype = {
 		/* ==== targets ==== */
-			calc: function(inc) {
-				if (inc) this.view += inc;
-				var tw = 0;
-				var lw = 0;
-				var o = this.diapos[this.view];
+		calc: function(inc) {
+			if (inc) this.view += inc;
+			var tw = 0;
+			var lw = 0;
+			var o = this.diapos[this.view];
 			if (o && o.loaded) {
 				/* ---- reset 重置---- */
 				var ob = this.diapos[this.back];
@@ -163,69 +164,70 @@ var imf = function(){
 				}
 				x = x0 - this.bdw;
 				for (var i = this.view - 1, o; o = this.diapos[i]; i--) {
-				if (o.loaded) {
-					o.w1 = (this.ht / o.r) * this.size;
-					o.x1 = x - o.w1;
-					x -= o.w1 + this.bdw;
-					tw += o.w1 + this.bdw;
-					lw += o.w1 + this.bdw;
+					if (o.loaded) {
+						o.w1 = (this.ht / o.r) * this.size;
+						o.x1 = x - o.w1;
+						x -= o.w1 + this.bdw;
+						tw += o.w1 + this.bdw;
+						lw += o.w1 + this.bdw;
+					}
 				}
+				/* ---- save preview view ---- */
+				this.back = this.view;
 			}
-			/* ---- save preview view ---- */
-			this.back = this.view;
+		},
+
+		/* ==== mousewheel scrolling 鼠标滚轮滚动==== */
+		scroll: function(sc){
+			if (sc < 0) {
+				if (this.view < this.NF - 1) this.calc(1);//左移个数；
+			} else {
+				if (this.view > 0) this.calc(-1);
+			}
+		},
+		/* ==== resize 调整 ==== */
+		resize: function(){
+			this.wh = this.oc.clientWidth;
+			this.ht = this.oc.clientHeight;
+			this.ws = this.scrollbar.offsetWidth;
+			this.calc();
+			this.run(true);
+		},
+		/* ==== move all images 移动所有的图片 ==== */
+		run: function(res) {
+			var i = this.NF;
+			while (i--) this.diapos[i].move(res);
 		}
-	},
-	
-	/* ==== mousewheel scrolling 鼠标滚轮滚动==== */
-	scroll: function(sc){
-		if (sc < 0) {
-			if (this.view < this.NF - 1) this.calc(1);//左移个数；
-		} else {
-			if (this.view > 0) this.calc(-1);
-		}
-	},
-	/* ==== resize 调整 ==== */
-	resize: function(){
-		this.wh = this.oc.clientWidth;
-		this.ht = this.oc.clientHeight;
-		this.ws = this.scrollbar.offsetWidth;
-		this.calc();
-		this.run(true);
-	},
-	/* ==== move all images 移动所有的图片 ==== */
-	run: function(res) {
-		var i = this.NF;
-		while (i--) this.diapos[i].move(res);
+
 	}
-	
-}
 
-/* //////////// ==== Diapo Constructor 构造==== //////////// */
-Diapo = function(parent, N, src, title, text, url, target,ch){
-	this.parent = parent;
-	this.loaded = false;
-	this.title = title;
-	this.text = text;
-	this.url = url;
-	this.target = target;
-	this.N = N;
-	this.CH = ch;
-	this.img = document.createElement('img');
-	this.img.src = src;
-	this.img.parent = this;
-	this.img.className = 'diapo';
-	this.img.style.position = 'absolute';
-	this.x0 = this.parent.oc.clientWidth;
-	this.x1 = this.x0;
-	this.w0 = 0;
-	this.w1 = 0;
-	this.z1 = 1;
-	this.img.parent = this;
+	/* //////////// ==== Diapo Constructor 构造==== //////////// */
+	Diapo = function(parent, N, src, title, text, url, target,ch, id){
+		this.parent = parent;
+		this.loaded = false;
+		this.title = title;
+		this.text = text;
+		this.url = url;
+		this.target = target;
+		this.N = N;
+		this.CH = ch;
+		this.img = document.createElement('img');
+		this.img.src = src;
+		this.img.parent = this;
+		this.img.className = 'diapo';
+		this.img.style.position = 'absolute';
+		this.img.id = id + "_img";
+		this.x0 = this.parent.oc.clientWidth;
+		this.x1 = this.x0;
+		this.w0 = 0;
+		this.w1 = 0;
+		this.z1 = 1;
+		this.img.parent = this;
 
-	this.parent.oc.appendChild(this.img);
-	
-	/* ---- display external link 显视外部链接---- */
-	if (url){
+		this.parent.oc.appendChild(this.img);
+
+		/* ---- display external link 显视外部链接---- */
+		if (url){
 			this.img.onmouseover = function(){
 				this.className = 'diapo link';
 			}
@@ -289,7 +291,7 @@ Diapo = function(parent, N, src, title, text, url, target,ch){
 			}
 		},
 		/* ==== diapo onclick 幻灯片单击==== */
-		
+
 	}
 	/* //////////// ==== public methods 公共方法==== //////////// */
 	return{
