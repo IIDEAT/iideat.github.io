@@ -26,7 +26,7 @@ query.find().then( (boards)=> {
         ul.appendChild(li2);
         a.rel = 'src/pic/' + yyy.name + '.png'
         a.id = yyy.name + '_show'
-        $("#" + a.id).on("click", function(){
+        $("#" + a.id + "_img").on("click", function(){
             if (onlyone == 0){
                 console.log(yyy.name);
                 let div = document.createElement('div')
