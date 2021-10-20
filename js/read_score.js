@@ -37,10 +37,11 @@ query.find().then( (boards)=> {
                 div.style.height = "80%";
                 div.style.width = "30%";
                 div.style.zIndex = 9999;
-                div.style.position = 'absolute';
+                div.style.position = 'relative';
                 div.style.top = "50%";
                 div.style.left = "50%";
                 div.style.boxShadow = "2px 2px 5px #000";
+                div.style.transform = "translate(-50%, -50%)";
                 document.getElementById('imageFlow').appendChild(div);
             }
             onlyone = 1;
