@@ -9,7 +9,6 @@ var query = new AV.Query('zhuoban');
       let array = boards.map((xxx)=>xxx.attributes)
       
       array.forEach((yyy =>{
-          let div = document.getElementsByClassName('bank')
           let a = document.createElement('a')
           let ul = document.createElement('ul')
           let li_name = document.createElement('li')
@@ -25,7 +24,7 @@ var query = new AV.Query('zhuoban');
           console.log(a.rel)
           a.href = 'http://sc.chinaz.com/'
           a.appendChild(ul);
-          div.appendChild(a);
+          document.getElementsById('ddd').appendChild(a);
           // let li = document.createElement('li')
           // li.innerText = yyy.name
           // let boardlist = document.querySelector('#messageList')
