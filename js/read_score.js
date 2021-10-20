@@ -24,7 +24,7 @@ var query = new AV.Query('zhuoban');
           console.log(a.rel)
           a.href = 'http://sc.chinaz.com/'
           a.appendChild(ul);
-          document.getElementsById('ddd').appendChild(a);
+          document.getElementById('ddd').appendChild(a);
           // let li = document.createElement('li')
           // li.innerText = yyy.name
           // let boardlist = document.querySelector('#messageList')
