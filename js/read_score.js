@@ -4,21 +4,6 @@ AV.init({
     serverURL: "https://1wfqgrgg.lc-cn-n1-shared.com"
 });
 
-function display(name, name_cn){
-    let div = document.createElement('div')
-    div.style.background = "#F8F8F5";
-    div.style.borderStyle = "solid";
-    div.style.borderColor = "#D4D4D4";
-    div.style.borderWidth = "1px";
-    div.style.height = "80%";
-    div.style.width = "30%";
-    div.style.zIndex = 9999;
-    div.style.position = 'absolute';
-    div.style.top = "50%";
-    div.style.left = "50%";
-    div.style.boxShadow = "2px 2px 5px #000";
-    document.getElementById('imageFlow').appendChild(div);
-}
 var query = new AV.Query('zhuoban');
 query.find().then( (boards)=> {
     let array = boards.map((xxx)=>xxx.attributes)
@@ -39,7 +24,21 @@ query.find().then( (boards)=> {
         li2.innerText = "桌瓣评分：" + score.toString() + " (" + yyy.num.toString() + "人评分)";
         ul.appendChild(li2);
         a.rel = 'src/pic/' + yyy.name + '.png'
-        a.onclick = function(){display(yyy.name, yyy.name_cn)}
+        a.onclick = function(){
+            let div = document.createElement('div')
+            div.style.background = "#F8F8F5";
+            div.style.borderStyle = "solid";
+            div.style.borderColor = "#D4D4D4";
+            div.style.borderWidth = "1px";
+            div.style.height = "80%";
+            div.style.width = "30%";
+            div.style.zIndex = 9999;
+            div.style.position = 'absolute';
+            div.style.top = "50%";
+            div.style.left = "50%";
+            div.style.boxShadow = "2px 2px 5px #000";
+            document.getElementById('imageFlow').appendChild(div);
+        }
         a.appendChild(ul);
         document.getElementById('ddd').appendChild(a);
         // let li = document.createElement('li')
