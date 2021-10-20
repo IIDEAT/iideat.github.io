@@ -7,7 +7,7 @@ AV.init({
 var query = new AV.Query('zhuoban');
   query.find().then( (boards)=> {
       let array = boards.map((xxx)=>xxx.attributes)
-      
+      console.log("wwww")
       array.forEach((yyy =>{
         console.log(yyy.name)
           // let li = document.createElement('li')
