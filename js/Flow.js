@@ -171,11 +171,6 @@ var imf = function(){
 					lw += o.w1 + this.bdw;
 				}
 			}
-			/* ---- move scrollbar 移动滚动条---- */
-			if (!this.scr && tw){
-				var r = (this.ws - this.alw - this.arw - this.bw) / tw;
-				this.bar.style.left = Math.round(this.alw + lw * r) + 'px';
-			}
 			/* ---- save preview view ---- */
 			this.back = this.view;
 		}
@@ -219,6 +214,7 @@ Diapo = function(parent, N, src, title, text, url, target,ch){
 	this.img.src = src;
 	this.img.parent = this;
 	this.img.className = 'diapo';
+	this.img.style.position = 'absolute';
 	this.x0 = this.parent.oc.clientWidth;
 	this.x1 = this.x0;
 	this.w0 = 0;
