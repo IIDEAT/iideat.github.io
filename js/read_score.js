@@ -7,17 +7,31 @@ AV.init({
 var query = new AV.Query('zhuoban');
   query.find().then( (boards)=> {
       let array = boards.map((xxx)=>xxx.attributes)
-      console.log("wwww")
+      
       array.forEach((yyy =>{
-        console.log(yyy.name)
+          let div = document.getElementsByClassName('bank')
+          let a = document.createElement('a')
+          let ul = document.createElement('ul')
+          let li_name = document.createElement('li')
+          li_name.className = 'ProTi';
+          li_name.innerText = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + yyy.name_cn;
+          ul.appendChild(li_name);
+          let li = document.createElement('li')
+          li.innerText = "作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：" + yyy.author;
+          ul.appendChild(li);
+          li.innerText = "桌瓣评分：";
+          ul.appendChild(li);
+          a.rel = 'src/pic/' + yyy.name + '.png'
+          console.log(a.rel)
+          a.href = 'http://sc.chinaz.com/'
+          a.appendChild(ul);
+          div.appendChild(a);
           // let li = document.createElement('li')
           // li.innerText = yyy.name
           // let boardlist = document.querySelector('#messageList')
           // boardlist.appendChild(li)
       }))
-    },function (error) {
-     alert('提交失败，改天再来')
-  });
+    });
 
 // let myForm = document.querySelector('#postMessage')
 // myForm.addEventListener('submit',(e)=>{
