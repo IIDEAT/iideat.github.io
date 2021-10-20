@@ -221,9 +221,7 @@ Diapo = function(parent, N, src, title, text, url, target,ch){
 	this.w1 = 0;
 	this.z1 = 1;
 	this.img.parent = this;
-	this.img.onclick = function(){
-		this.parent.click();
-	}
+
 	this.parent.oc.appendChild(this.img);
 	
 	/* ---- display external link 显视外部链接---- */
@@ -291,24 +289,7 @@ Diapo = function(parent, N, src, title, text, url, target,ch){
 			}
 		},
 		/* ==== diapo onclick 幻灯片单击==== */
-		click: function(){
-			if (this.parent.view == this.N) {
-				/* ---- click on zoomed diapo 单击已放大的图---- */
-				if (this.url){
-					/* ---- open hyperlink 打开一个链接---- */
-					window.open(this.url, this.target);
-				} else {
-					/* ---- zoom in/out 放大或缩小动作---- */
-					this.z1 = this.z1 == 1 ? this.parent.zoom : 1;
-					this.parent.calc();
-				}
-			} else {
-				/* ---- select diapo 选择幻灯片---- */
-				this.parent.view = this.N;
-				this.parent.calc();
-			}
-			return false;
-		}
+		
 	}
 	/* //////////// ==== public methods 公共方法==== //////////// */
 	return{
