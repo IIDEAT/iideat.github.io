@@ -33,19 +33,7 @@ body{font:24px/180% Arial, Helvetica, sans-serif, "微软雅黑";background:#F8F
 <script type="text/javascript" src="js/Flow.js"></script>
 <script type="text/javascript">
 /* ==== create imageFlow ==== */
-if($.browser.msie&&($.browser.version == "6.0")&&!$.support.style){ 
-	imf.create("imageFlow", 0.78, 1, 5);
-	$(document).ready(function(){
-		$(".bar").attr("src","images/clear.gif");   
-		$(".bar").attr("style","filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src='images/sc.png')");
-		$(".arrow-left").attr("src","images/clear.gif");   
-		$(".arrow-left").attr("style","filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src='images/btn_Pro_show_left.png')");
-		$(".arrow-right").attr("src","images/clear.gif");   
-		$(".arrow-right").attr("style","filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src='images/btn_Pro_show_right.png')");
-	});
-} else { 
 	imf.create("imageFlow", 0.5, 1.5, 5);
-} 
 </script>
 
 <div id="imageFlow">
