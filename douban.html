@@ -2,6 +2,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>桌瓣</title>
 <script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
+	<script src="js/Flow.js"></script>
+	<script src="js/DDPngMin.js"></script>
+	<script src="js/read_score.js"></script>
 </head>
 <body>
 <!--演示内容开始-->
@@ -10,19 +13,12 @@
 a,img{border:0;text-decoration:none;}
 body{font:24px/180% Arial, Helvetica, sans-serif, "微软雅黑";background:#F8F8F5;}
 /* imageFlow */
-#imageFlow{width:85%;height:85%;overflow:hidden;position:relative;top:50%;left: 50%;transform: translate(-50%, -50%);border:5px solid red;}
+#imageFlow{width:100%;height:100%;overflow:hidden;position:relative;top:50%;left: 50%;transform: translate(-50%, -50%)}
 #imageFlow .bank{visibility:hidden;overflow:hidden;}
 #imageFlow ul{height:20px;margin:0 auto;width:100%;text-align:center;}
-#imageFlow ul li{color:#333;font-size:12px;text-align:left;margin-left:30%;height:20px;line-height:20px;overflow:hidden;width:100%;vertical-align:bottom;}
-#imageFlow .text{position:absolute;left:0px;width:80px;bottom:1%;text-align:center;color:#333;font-family:verdana, arial, Helvetica, sans-serif;z-index:1000;}
-#imageFlow .title{font-size:10px;font-weight:bold;}
-#imageFlow .legend{font-size:0.8em;}
-#imageFlow .scrollbar{position:relative;left:10%;top:0%;width:80%;z-index:1;border:5px solid red;}
-#imageFlow .scrollbar img{cursor:pointer;}
-#imageFlow .track{position:absolute;left:-55px;width:950px;height:16px;top:0px;}
-#imageFlow .arrow-left{position:relative;z-index:1;}
-#imageFlow .arrow-right{position:relative;z-index:1;}
-#imageFlow .bar{position:absolute;height:16px;left:25px;top:0px;cursor:pointer;}
+#imageFlow ul li{color:#333;font-size:20px;text-align:left;margin-left:30%;height:40px;line-height:20px;overflow:hidden;width:100%;vertical-align:bottom;}
+#imageFlow .arrow-left{position:absolute;z-index:1;left :5%;top:50%;}
+#imageFlow .arrow-right{position:absolute;z-index:1;right :5%;top:50%;}
 #imageFlow .ProTi{color:#ff6600;font-weight:bold;}
 #imageFlow .ProRmb{font-weight:bold;}
 #imageFlow .ProMo{color:#ff6600;cursor:pointer;}
@@ -53,28 +49,36 @@ if($.browser.msie&&($.browser.version == "6.0")&&!$.support.style){
 
 <div id="imageFlow">
 	<div class="bank">
-		<a rel='src/pic/xuri.png' href='http://sc.chinaz.com/'>
+		<a rel='src/pic/xur.png' href='http://sc.chinaz.com/' >
 			<ul>
-				<li class="ProTi" >旭日战魂录</li>
+				<li class="ProTi" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;旭日战魂录</li>
+				<li>作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：Eric.M.Lang</li>
+				<li>桌瓣评分：</li>
+			</ul>  
+		</a>
+
+		<a rel='src/pic/xur.png' href='http://sc.chinaz.com/' >
+			<ul>
+				<li class="ProTi" >tst</li>
 				<li>作者：Eric.M.Lang</li>
 				<li>桌瓣评分：</li>
 			</ul>  
 		</a>
 
-		<a rel='src/pic/xuri.png' href='http://sc.chinaz.com/'>
-			<ul>
-				<li class="ProTi" >旭日战魂录</li>
-				<li>作者：Eric.M.Lang</li>
-				<li>桌瓣评分：</li>
-			</ul>  
-		</a>
-
-		<a rel='src/pic/xuri.png' href='http://sc.chinaz.com/'>
+		<a rel='src/pic/xur.png' href='http://sc.chinaz.com/' >
 		<ul>
-			<li class="ProTi" >旭日战魂录</li>
+			<li class="ProTi" >tst</li>
 			<li>作者：Eric.M.Lang</li>
 			<li>桌瓣评分：</li>
 		</ul>  
+		</a>
+
+		<a rel='src/pic/xur.png' href='http://sc.chinaz.com/' >
+			<ul>
+				<li class="ProTi" >tst</li>
+				<li>作者：Eric.M.Lang</li>
+				<li>桌瓣评分：</li>
+			</ul>
 		</a>
 	</div>
 	
