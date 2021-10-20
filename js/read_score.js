@@ -11,9 +11,13 @@ function display(name, name_cn){
     div.style.borderColor = "#D4D4D4";
     div.style.borderWidth = "1px";
     div.style.height = "80%";
-    div.style.width = "20%";
+    div.style.width = "30%";
     div.style.zIndex = 9999;
-    document.body.appendChild(div);
+    div.style.position = 'absolute';
+    div.style.top = "50%";
+    div.style.left = "50%";
+    div.style.boxShadow = "2px 2px 5px #000";
+    document.getElementById('imageFlow').appendChild(div);
 }
 var query = new AV.Query('zhuoban');
 query.find().then( (boards)=> {
