@@ -25,6 +25,7 @@ query.find().then( (boards)=> {
         ul.appendChild(li2);
         a.rel = 'src/pic/' + yyy.name + '.png'
         a.onclick = function(){
+            console.log(yyy.name);
             let div = document.createElement('div')
             div.style.background = "#F8F8F5";
             div.style.borderStyle = "solid";
