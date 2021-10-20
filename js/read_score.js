@@ -12,6 +12,7 @@ function display(name, name_cn){
     div.style.borderWidth = "1px";
     div.style.height = "80%";
     div.style.width = "20%";
+    div.style.zIndex = 9999;
 }
 var query = new AV.Query('zhuoban');
 query.find().then( (boards)=> {
@@ -34,7 +35,6 @@ query.find().then( (boards)=> {
         ul.appendChild(li2);
         a.rel = 'src/pic/' + yyy.name + '.png'
         a.onclick = Function(display(yyy.name, yyy.name_cn))
-        a.href = 'http://sc.chinaz.com/'
         a.appendChild(ul);
         document.getElementById('ddd').appendChild(a);
         // let li = document.createElement('li')
