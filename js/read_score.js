@@ -21,7 +21,7 @@ var query = new AV.Query('zhuoban');
           let li2 = document.createElement('li')
           var score = ((yyy.nandu + yyy.suiji + yyy.yule + yyy.celue + yyy.dairu + yyy.hudong + yyy.meishu) / 7 ).toFixed(2);
           console.log(score);
-          li2.innerText = "桌瓣评分：" + score.toSring();
+          li2.innerText = "桌瓣评分：" + score.toString();
           ul.appendChild(li2);
           a.rel = 'src/pic/' + yyy.name + '.png'
           console.log(a.rel)
