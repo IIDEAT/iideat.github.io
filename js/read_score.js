@@ -13,6 +13,7 @@ function display(name, name_cn){
     div.style.height = "80%";
     div.style.width = "20%";
     div.style.zIndex = 9999;
+    document.body.appendChild(div);
 }
 var query = new AV.Query('zhuoban');
 query.find().then( (boards)=> {
