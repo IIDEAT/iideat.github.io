@@ -13,10 +13,10 @@ var query = new AV.Query('zhuoban');
           let ul = document.createElement('ul')
           let li_name = document.createElement('li')
           li_name.className = 'ProTi';
-          li_name.innerText = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + yyy.name_cn;
+          li_name.innerText = "\xa0\xa0\xa0\xa0\xa0\xa0\xa0" + yyy.name_cn;
           ul.appendChild(li_name);
           let li = document.createElement('li')
-          li.innerText = "作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：" + yyy.author;
+          li.innerText = "作\xa0\xa0\xa0\xa0\xa0\xa0者：" + yyy.author;
           ul.appendChild(li);
           li.innerText = "桌瓣评分：";
           ul.appendChild(li);
