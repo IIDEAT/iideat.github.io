@@ -39,7 +39,7 @@ query.find().then( (boards)=> {
         li2.innerText = "桌瓣评分：" + score.toString() + " (" + yyy.num.toString() + "人评分)";
         ul.appendChild(li2);
         a.rel = 'src/pic/' + yyy.name + '.png'
-        a.onclick = Function(display(yyy.name, yyy.name_cn))
+        a.onclick = "display(yyy.name, yyy.name_cn)"
         a.appendChild(ul);
         document.getElementById('ddd').appendChild(a);
         // let li = document.createElement('li')
