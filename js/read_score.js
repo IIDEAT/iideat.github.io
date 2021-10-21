@@ -75,18 +75,18 @@ query.find().then((boards) => {
                 bo3.style.width = "32%";
                 bo3.style.border = "0";
                 bo3.style.float = "right";
-                bo3.innerHTML += "<select style='height:14%; width:100%' id='nandu_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
-                bo3.innerHTML += "<select style='height:14%;width:100%' id='celue_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
-                bo3.innerHTML += "<select style='height:14%;width:100%' id='yule_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
-                bo3.innerHTML += "<select style='height:14%;width:100%' id='suiji_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
-                bo3.innerHTML += "<select style='height:14%;width:100%' id='hudong_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
-                bo3.innerHTML += "<select style='height:14%;width:100%' id='dairu_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
-                bo3.innerHTML += "<select style='height:14%;width:100%' id='meishu_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
+                bo3.innerHTML += "<select style='height:14%; width:100%;background-color: #e7e7e7' id='nandu_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;width:100%;background-color: #e7e7e7' id='celue_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;width:100%;background-color: #e7e7e7' id='yule_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;width:100%;background-color: #e7e7e7' id='suiji_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;width:100%;background-color: #e7e7e7' id='hudong_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;width:100%;background-color: #e7e7e7' id='dairu_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;width:100%;background-color: #e7e7e7' id='meishu_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
 
                 let submit = document.createElement('input')
                 submit.type = "submit"
                 submit.id = 'btn_submit'
-                submit.style.height = "10%"
+                submit.style.height = "5%"
                 submit.style.width = "30%"
                 submit.style.float = 'left'
                 submit.style.left = "10%"
@@ -94,10 +94,10 @@ query.find().then((boards) => {
                 let cancel = document.createElement('input')
                 cancel.type = 'button'
                 cancel.id = 'btn_cancel'
-                cancel.style.height = "10%"
+                cancel.style.height = "5%"
                 cancel.style.width = "30%"
                 cancel.style.float = 'right'
-                cancel.style.left = "10%"
+                cancel.style.right = "10%"
                 cancel.style.position = "relative"
                 div.appendChild(header);
                 div.appendChild(bo1);
