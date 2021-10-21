@@ -30,6 +30,7 @@ query.find().then((boards) => {
             if (onlyone == 0) {
                 console.log(yyy.name);
                 let div = document.createElement('div')
+                div.id = yyy.name + "_div"
                 div.style.background = "#F8F8F5";
                 div.style.borderStyle = "solid";
                 div.style.borderColor = "#D4D4D4";
