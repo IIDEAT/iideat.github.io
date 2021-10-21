@@ -58,7 +58,8 @@ query.find().then((boards) => {
                 bo1.style.borderWidth = "1px";
                 bo1.style.float = "left";
                 bo1.style.textAlign = "center";
-                bo1.innerHTML += "<h5>规则难易</h5><h5>策略性</h5><h5>娱乐性</h5><h5>随机性</h5><h5>互动感</h5><h5>代入感</h5><h5>美术</h5>"
+                bo1.innerHTML += "<h5 style='height:14%;'>规则难易</h5><h5 style='height:14%;'>策略性</h5><h5 style='height:14%;'>娱乐性</h5>" +
+                    "<h5 style='height:14%;'>随机性</h5><h5 style='height:14%;'>互动感</h5><h5 style='height:14%;'>代入感</h5><h5 style='height:14%;'>美术</h5>"
 
                 let bo2 = document.createElement('div')
                 bo2.style.height = "80%";
@@ -68,10 +69,13 @@ query.find().then((boards) => {
                 bo2.style.borderWidth = "1px";
                 bo2.style.float = "left";
                 bo2.style.textAlign = "center";
-                // bo2.innerHTML += "<h5>" + yyy.nandu.toFixed(2)+ "/5.00</h5>" +
+                bo2.innerHTML += "<h5 style='height:14%;'>" + yyy.nandu.toFixed(2)+ "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.celue.toFixed(2)+ "/5.00</h5>"
+                + "<h5 style='height:14%;'>" + yyy.yule.toFixed(2)+ "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.suiji.toFixed(2)+ "/5.00</h5>"
+                + "<h5 style='height:14%;'>" + yyy.hudong.toFixed(2)+ "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.dairu.toFixed(2)+ "/5.00</h5>"
+                + "<h5 style='height:14%;'>" + yyy.meishu.toFixed(2)+ "/5.00</h5>"
                 let bo3 = document.createElement('div')
                 bo3.style.height = "80%";
-                bo3.style.width = "33%";
+                bo3.style.width = "32%";
                 bo3.style.borderStyle = "solid";
                 bo3.style.borderColor = "#e31010";
                 bo3.style.borderWidth = "1px";
