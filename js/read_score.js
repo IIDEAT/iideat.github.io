@@ -91,6 +91,7 @@ query.find().then((boards) => {
                 submit.style.float = 'left'
                 submit.style.left = "10%"
                 submit.style.position = "relative"
+                submit.value = "确定"
                 let cancel = document.createElement('input')
                 cancel.type = 'button'
                 cancel.id = 'btn_cancel'
@@ -99,6 +100,13 @@ query.find().then((boards) => {
                 cancel.style.float = 'right'
                 cancel.style.right = "10%"
                 cancel.style.position = "relative"
+                cancel.value = "关闭"
+                cancel.onclick = function()
+                {
+                    var obj = document.getElementById(yyy.name + "_div");
+                    obj.parentNode.removeChild(obj);
+                    onlyone = 0;
+                }
                 div.appendChild(header);
                 div.appendChild(bo1);
                 div.appendChild(bo2);
