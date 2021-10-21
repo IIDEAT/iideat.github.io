@@ -1,8 +1,6 @@
-console.log("file");
 var imf = function(){
 	var lf = 0;
 	var instances = [];
-	console.log("function");
 	function getElementsByClass(object, tag, className){
 		var o = object.getElementsByTagName(tag);
 		for (var i = 0, n = o.length, ret = []; i < n; i++)
