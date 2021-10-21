@@ -326,6 +326,7 @@ var imf = function(){
 						});
 						setInterval(function() {
 							var i = instances.length;
+							console.log(i);
 							while (i--) instances[i].run();
 						}, 16);
 					}
