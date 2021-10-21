@@ -66,9 +66,9 @@ query.find().then((boards) => {
                 bo2.style.float = "left";
                 bo2.style.textAlign = "center";
                 bo2.innerHTML += "<h5 style='height:14%;'>" + yyy.nandu.toFixed(2)+ "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.celue.toFixed(2)+ "/5.00</h5>"
-                + "<h5 style='height:14%;'>" + yyy.yule.toFixed(2)+ "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.suiji.toFixed(2)+ "/5.00</h5>"
-                + "<h5 style='height:14%;'>" + yyy.hudong.toFixed(2)+ "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.dairu.toFixed(2)+ "/5.00</h5>"
-                + "<h5 style='height:14%;'>" + yyy.meishu.toFixed(2)+ "/5.00</h5>"
+                    + "<h5 style='height:14%;'>" + yyy.yule.toFixed(2)+ "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.suiji.toFixed(2)+ "/5.00</h5>"
+                    + "<h5 style='height:14%;'>" + yyy.hudong.toFixed(2)+ "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.dairu.toFixed(2)+ "/5.00</h5>"
+                    + "<h5 style='height:14%;'>" + yyy.meishu.toFixed(2)+ "/5.00</h5>"
                 let bo3 = document.createElement('div')
                 bo3.style.height = "80%";
                 bo3.style.width = "32%";
@@ -82,12 +82,23 @@ query.find().then((boards) => {
                 bo3.innerHTML += "<select style='height:14%;width:100%' id='dairu_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
                 bo3.innerHTML += "<select style='height:14%;width:100%' id='meishu_s'><option value ='5'>5</option><option value ='4'>4</option><option value ='3'>3</option><option value ='2'>2</option><option value ='1'>1</option></select>"
 
-
-
+                let submit = document.createElement('input')
+                submit.type = "submit"
+                submit.id = 'btn_submit'
+                submit.height = "10%"
+                submit.width = "25%"
+                submit.style.float = 'left'
+                let cancel = document.createElement('input')
+                cancel.id = 'btn_cancel'
+                cancel.height = "10%"
+                cancel.width = "25%"
+                cancel.style.float = 'right'
                 div.appendChild(header);
                 div.appendChild(bo1);
                 div.appendChild(bo2);
                 div.appendChild(bo3);
+                div.appendChild(submit);
+                div.appendChild(cancel);
                 document.getElementById('imageFlow').appendChild(div);
             }
             onlyone = 1;
