@@ -42,11 +42,42 @@ query.find().then( (boards)=> {
                 div.style.left = "50%";
                 div.style.boxShadow = "2px 2px 5px #000";
                 div.style.transform = "translate(-50%, -50%)";
+
+                let header = document.createElement('div')
+                header.style.padding = "2%";
+                header.style.textAlign = "center";
+                let h1 = document.createElement('h1')
+                h1.innerText = yyy.name_cn;
+                header.appendChild(h1);
+
+                let bo1 = document.createElement('div')
+                bo1.style.height = "80%";
+                bo1.style.width = "33.3%";
+                bo1.style.borderStyle = "solid";
+                bo1.style.borderColor = "#e31010";
+                bo1.style.borderWidth = "1px";
+                let bo2 = document.createElement('div')
+                bo2.style.height = "80%";
+                bo2.style.width = "33.3%";
+                bo2.style.borderStyle = "solid";
+                bo2.style.borderColor = "#e31010";
+                bo2.style.borderWidth = "1px";
+                let bo3 = document.createElement('div')
+                bo3.style.height = "80%";
+                bo3.style.width = "33.3%";
+                bo3.style.borderStyle = "solid";
+                bo3.style.borderColor = "#e31010";
+                bo3.style.borderWidth = "1px";
+
+                div.appendChild(header);
+                div.appendChild(bo1);
+                div.appendChild(bo2);
+                div.appendChild(bo3);
                 document.getElementById('imageFlow').appendChild(div);
             }
             onlyone = 1;
         })
-        
+
         a.appendChild(ul);
         document.getElementById('ddd').appendChild(a);
         // let li = document.createElement('li')
