@@ -86,13 +86,16 @@ query.find().then((boards) => {
                 submit.type = "submit"
                 submit.id = 'btn_submit'
                 submit.height = "10%"
-                submit.width = "25%"
+                submit.width = "30%"
                 submit.style.float = 'left'
+                submit.style.left = "10%"
                 let cancel = document.createElement('input')
+                cancel.type = 'button'
                 cancel.id = 'btn_cancel'
                 cancel.height = "10%"
-                cancel.width = "25%"
+                cancel.width = "30%"
                 cancel.style.float = 'right'
+                cancel.style.left = "10%"
                 div.appendChild(header);
                 div.appendChild(bo1);
                 div.appendChild(bo2);
