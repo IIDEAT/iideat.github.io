@@ -326,11 +326,7 @@ var imf = function(){
 							}
 							return false;
 						});
-						/* ---- set interval loop 设置循环间隔---- */
-						setInterval(function() {
-							var i = instances.length;
-							while (i--) instances[i].run();
-						}, 16);
+						
 					}
 				}
 			}
