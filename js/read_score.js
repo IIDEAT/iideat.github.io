@@ -74,13 +74,13 @@ query.find().then((boards) => {
                 bo3.style.width = "32%";
                 bo3.style.border = "0";
                 bo3.style.float = "right";
-                bo3.innerHTML += <select style='height:14%;' id="nandu_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
-                bo3.innerHTML += <select style='height:14%;' id="celue_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
-                bo3.innerHTML += <select style='height:14%;' id="yule_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
-                bo3.innerHTML += <select style='height:14%;' id="suiji_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
-                bo3.innerHTML += <select style='height:14%;' id="hudong_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
-                bo3.innerHTML += <select style='height:14%;' id="dairu_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
-                bo3.innerHTML += <select style='height:14%;' id="meishu_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
+                bo3.innerHTML += "<select style='height:14%;' id="nandu_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;' id="celue_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;' id="yule_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;' id="suiji_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;' id="hudong_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;' id="dairu_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>"
+                bo3.innerHTML += "<select style='height:14%;' id="meishu_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>"
 
 
                 div.appendChild(header);
