@@ -6,10 +6,10 @@ AV.init({
 
 var onlyone = 0;
 var query = new AV.Query('zhuoban');
-query.find().then( (boards)=> {
-    let array = boards.map((xxx)=>xxx.attributes)
+query.find().then((boards) => {
+    let array = boards.map((xxx) => xxx.attributes)
 
-    array.forEach((yyy =>{
+    array.forEach((yyy => {
         let a = document.createElement('a')
         let ul = document.createElement('ul')
         let li_name = document.createElement('li')
@@ -20,14 +20,14 @@ query.find().then( (boards)=> {
         li.innerText = "作\xa0\xa0\xa0\xa0\xa0\xa0者：" + yyy.author;
         ul.appendChild(li);
         let li2 = document.createElement('li')
-        var score = ((yyy.nandu + yyy.suiji + yyy.yule + yyy.celue + yyy.dairu + yyy.hudong + yyy.meishu) / 7 ).toFixed(2);
+        var score = ((yyy.nandu + yyy.suiji + yyy.yule + yyy.celue + yyy.dairu + yyy.hudong + yyy.meishu) / 7).toFixed(2);
         console.log(score);
         li2.innerText = "桌瓣评分：" + score.toString() + " (" + yyy.num.toString() + "人评分)";
         ul.appendChild(li2);
         a.rel = 'src/pic/' + yyy.name + '.png'
         a.id = yyy.name + '_show'
-        $('body').on("click", "#" + a.id + "_img", function(){
-            if (onlyone == 0){
+        $('body').on("click", "#" + a.id + "_img", function () {
+            if (onlyone == 0) {
                 console.log(yyy.name);
                 let div = document.createElement('div')
                 div.style.background = "#F8F8F5";
@@ -44,7 +44,7 @@ query.find().then( (boards)=> {
                 div.style.transform = "translate(-50%, -50%)";
 
                 let header = document.createElement('div')
-                header.style.padding = "2%";
+                header.style.padding = "5%";
                 header.style.textAlign = "center";
                 let h1 = document.createElement('h1')
                 h1.innerText = yyy.name_cn;
@@ -56,18 +56,23 @@ query.find().then( (boards)=> {
                 bo1.style.borderStyle = "solid";
                 bo1.style.borderColor = "#e31010";
                 bo1.style.borderWidth = "1px";
+                bo1.style.float = "left";
+
                 let bo2 = document.createElement('div')
                 bo2.style.height = "80%";
                 bo2.style.width = "33.3%";
                 bo2.style.borderStyle = "solid";
                 bo2.style.borderColor = "#e31010";
                 bo2.style.borderWidth = "1px";
+                bo2.style.float = "left";
+
                 let bo3 = document.createElement('div')
                 bo3.style.height = "80%";
                 bo3.style.width = "33.3%";
                 bo3.style.borderStyle = "solid";
                 bo3.style.borderColor = "#e31010";
                 bo3.style.borderWidth = "1px";
+                bo3.style.float = "right";
 
                 div.appendChild(header);
                 div.appendChild(bo1);
