@@ -326,7 +326,10 @@ var imf = function(){
 							}
 							return false;
 						});
-						
+						setInterval(function() {
+							var i = instances.length;
+							while (i--) instances[i].run();
+						}, 16);
 					}
 				}
 			}
