@@ -58,7 +58,7 @@ query.find().then((boards) => {
                 bo1.style.borderWidth = "1px";
                 bo1.style.float = "left";
                 bo1.style.textAlign = "center";
-                bo1.style.lineHeight = "5%";
+                bo1.style.verticalAlign = "middle";
                 bo1.innerHTML += "<h5>规则难易</h5><h5>策略性</h5><h5>娱乐性</h5><h5>随机性</h5><h5>互动感</h5><h5>代入感</h5><h5>美术</h5>"
 
                 let bo2 = document.createElement('div')
