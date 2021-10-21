@@ -21,14 +21,12 @@ query.find().then((boards) => {
         ul.appendChild(li);
         let li2 = document.createElement('li')
         var score = ((yyy.nandu + yyy.suiji + yyy.yule + yyy.celue + yyy.dairu + yyy.hudong + yyy.meishu) / 7).toFixed(2);
-        console.log(score);
         li2.innerText = "桌瓣评分：" + score.toString() + " (" + yyy.num.toString() + "人评分)";
         ul.appendChild(li2);
         a.rel = 'src/pic/' + yyy.name + '.png'
         a.id = yyy.name + '_show'
         $('body').on("click", "#" + a.id + "_img", function () {
             if (onlyone == 0) {
-                console.log(yyy.name);
                 let div = document.createElement('div')
                 div.id = yyy.name + "_div"
                 div.style.background = "#F8F8F5";
