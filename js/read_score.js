@@ -51,6 +51,7 @@ query.find().then((boards) => {
                 header.appendChild(h1);
 
                 let bo1 = document.createElement('div')
+                let table1 = document.createElement('table')
                 bo1.style.height = "80%";
                 bo1.style.width = "33%";
                 bo1.style.borderStyle = "solid";
@@ -58,9 +59,12 @@ query.find().then((boards) => {
                 bo1.style.borderWidth = "1px";
                 bo1.style.float = "left";
                 bo1.style.textAlign = "center";
-                bo1.style.verticalAlign = "middle";
-                bo1.innerHTML += "<h5>规则难易</h5><h5>策略性</h5><h5>娱乐性</h5><h5>随机性</h5><h5>互动感</h5><h5>代入感</h5><h5>美术</h5>"
-
+                table1.style.border = "0";
+                table1.style.width = "100%";
+                table1.style.height = "100%";
+                table1.innerHTML  += "<tr>规则难易</tr><tr>策略性</tr><tr>娱乐性</tr><tr>随机性</tr><tr>互动感</tr><tr>代入感</tr><tr>美术</tr>"
+                bo1.appendChild(table1);
+                
                 let bo2 = document.createElement('div')
                 bo2.style.height = "80%";
                 bo2.style.width = "33%";
@@ -68,7 +72,8 @@ query.find().then((boards) => {
                 bo2.style.borderColor = "#e31010";
                 bo2.style.borderWidth = "1px";
                 bo2.style.float = "left";
-
+                bo2.style.textAlign = "center";
+                // bo2.innerHTML += "<h5>" + yyy.nandu.toFixed(2)+ "/5.00</h5>" +
                 let bo3 = document.createElement('div')
                 bo3.style.height = "80%";
                 bo3.style.width = "33%";
