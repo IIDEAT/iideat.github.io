@@ -52,7 +52,7 @@ query.find().then((boards) => {
 
                 let bo1 = document.createElement('div')
                 bo1.style.height = "80%";
-                bo1.style.width = "33.3%";
+                bo1.style.width = "33%";
                 bo1.style.borderStyle = "solid";
                 bo1.style.borderColor = "#e31010";
                 bo1.style.borderWidth = "1px";
@@ -60,7 +60,7 @@ query.find().then((boards) => {
 
                 let bo2 = document.createElement('div')
                 bo2.style.height = "80%";
-                bo2.style.width = "33.3%";
+                bo2.style.width = "33%";
                 bo2.style.borderStyle = "solid";
                 bo2.style.borderColor = "#e31010";
                 bo2.style.borderWidth = "1px";
@@ -68,7 +68,7 @@ query.find().then((boards) => {
 
                 let bo3 = document.createElement('div')
                 bo3.style.height = "80%";
-                bo3.style.width = "33.3%";
+                bo3.style.width = "33%";
                 bo3.style.borderStyle = "solid";
                 bo3.style.borderColor = "#e31010";
                 bo3.style.borderWidth = "1px";
