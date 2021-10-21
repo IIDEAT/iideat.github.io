@@ -51,7 +51,7 @@ query.find().then((boards) => {
                 header.appendChild(h1);
 
                 let bo1 = document.createElement('div')
-                let table1 = document.createElement('table')
+                let table1 = document.createElement('ul')
                 bo1.style.height = "80%";
                 bo1.style.width = "33%";
                 bo1.style.borderStyle = "solid";
@@ -62,9 +62,9 @@ query.find().then((boards) => {
                 table1.style.border = "0";
                 table1.style.width = "100%";
                 table1.style.height = "100%";
-                table1.innerHTML  += "<tr>规则难易</tr><tr>策略性</tr><tr>娱乐性</tr><tr>随机性</tr><tr>互动感</tr><tr>代入感</tr><tr>美术</tr>"
+                table1.innerHTML  += "<li>规则难易</li><li>策略性</li><li>娱乐性</li><li>随机性</li><li>互动感</li><li>代入感</li><li>美术</li>"
                 bo1.appendChild(table1);
-                
+
                 let bo2 = document.createElement('div')
                 bo2.style.height = "80%";
                 bo2.style.width = "33%";
