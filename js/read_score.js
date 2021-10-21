@@ -53,9 +53,7 @@ query.find().then((boards) => {
                 let bo1 = document.createElement('div')
                 bo1.style.height = "80%";
                 bo1.style.width = "33%";
-                bo1.style.borderStyle = "solid";
-                bo1.style.borderColor = "#e31010";
-                bo1.style.borderWidth = "1px";
+                bo1.style.border = "0";
                 bo1.style.float = "left";
                 bo1.style.textAlign = "center";
                 bo1.innerHTML += "<h5 style='height:14%;'>规则难易</h5><h5 style='height:14%;'>策略性</h5><h5 style='height:14%;'>娱乐性</h5>" +
@@ -64,9 +62,7 @@ query.find().then((boards) => {
                 let bo2 = document.createElement('div')
                 bo2.style.height = "80%";
                 bo2.style.width = "33%";
-                bo2.style.borderStyle = "solid";
-                bo2.style.borderColor = "#e31010";
-                bo2.style.borderWidth = "1px";
+                bo2.style.border = "0";
                 bo2.style.float = "left";
                 bo2.style.textAlign = "center";
                 bo2.innerHTML += "<h5 style='height:14%;'>" + yyy.nandu.toFixed(2)+ "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.celue.toFixed(2)+ "/5.00</h5>"
@@ -76,10 +72,16 @@ query.find().then((boards) => {
                 let bo3 = document.createElement('div')
                 bo3.style.height = "80%";
                 bo3.style.width = "32%";
-                bo3.style.borderStyle = "solid";
-                bo3.style.borderColor = "#e31010";
-                bo3.style.borderWidth = "1px";
+                bo3.style.border = "0";
                 bo3.style.float = "right";
+                bo3.innerHTML += <select style='height:14%;' id="nandu_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
+                bo3.innerHTML += <select style='height:14%;' id="celue_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
+                bo3.innerHTML += <select style='height:14%;' id="yule_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
+                bo3.innerHTML += <select style='height:14%;' id="suiji_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
+                bo3.innerHTML += <select style='height:14%;' id="hudong_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
+                bo3.innerHTML += <select style='height:14%;' id="dairu_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
+                bo3.innerHTML += <select style='height:14%;' id="meishu_s"><option value ="5">5</option><option value ="4">4</option><option value ="3">53</option><option value ="2">2</option><option value ="1">1</option></select>
+
 
                 div.appendChild(header);
                 div.appendChild(bo1);
