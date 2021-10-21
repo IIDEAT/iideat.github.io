@@ -58,7 +58,8 @@ query.find().then((boards) => {
                 bo1.style.borderWidth = "1px";
                 bo1.style.float = "left";
                 bo1.style.textAlign = "center";
-                bo1.innerHTML += "<h3>规则难易</h3><h3>策略性</h3><h3>娱乐性</h3><h3>随机性</h3><h3>互动感</h3><h3>代入感</h3><h3>美术</h3>"
+                bo1.innerHTML += "<h5 style='line-height: 5%;'>规则难易</h5><h5 style='line-height: 5%;'>策略性</h5><h5 style='line-height: 5%;'>娱乐性</h5>" +
+                    "<h5 style='line-height: 5%;'>随机性</h5><h5 style='line-height: 5%;'>互动感</h5><h5 style='line-height: 5%;'>代入感</h5><h5 style='line-height: 5%;'>美术</h5>"
 
                 let bo2 = document.createElement('div')
                 bo2.style.height = "80%";
