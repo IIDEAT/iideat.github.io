@@ -332,10 +332,10 @@ var imf = function(){
 					}
 				}
 			}
-// 			/* ---- window onload event ---- */
-// 			addEvent(window, 'load', function(){
-// 				load();
-// 			});
+			/* ---- window onload event ---- */
+			addEvent(window, 'load', function(){
+				load();
+			});
 		}
 	}
 }();
