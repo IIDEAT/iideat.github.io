@@ -348,9 +348,8 @@ function task1() {
             }
         }
     }();
-    return new Promise(resolve => {
-        imf.create("imageFlow", 0.5, 1.5, 5);
-    });
+    imf.create("imageFlow", 0.5, 1.5, 5);
+
 }
 
 
