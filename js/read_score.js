@@ -8,7 +8,7 @@ AV.init({
     var onlyone = 0;
     var query = new AV.Query('zhuoban');
     console.log("read");
-    query.equalTo('priority', 1);
+
     boards = await  query.find()
 
     let array = boards.map((xxx) => xxx.attributes)
