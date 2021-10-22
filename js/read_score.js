@@ -373,6 +373,7 @@ var imf = function () {
             a.id = yyy.name + '_show'
             $('body').on("click", "#" + a.id + "_img", function () {
                 if (onlyone == 0) {
+                    onlyone = 1
                     let div = document.createElement('div')
                     div.id = yyy.name + "_div"
                     div.style.background = "#F8F8F5";
@@ -490,7 +491,7 @@ var imf = function () {
                     div.appendChild(cancel);
                     document.getElementById('imageFlow').appendChild(div);
                 }
-                onlyone = 1;
+                
             })
 
             a.appendChild(ul);
