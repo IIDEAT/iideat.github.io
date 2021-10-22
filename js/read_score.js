@@ -332,10 +332,10 @@ var imf = function () {
                             }
                             return false;
                         });
-                       setInterval(function() {
-							var i = instances.length;
-							while (i--) instances[i].run();
-						}, 16);
+                        setInterval(function() {
+                            var i = instances.length;
+                            while (i--) instances[i].run();
+                        }, 16);
                     }
                 }
             }
@@ -436,6 +436,26 @@ var imf = function () {
                     submit.style.left = "10%"
                     submit.style.position = "relative"
                     submit.value = "确定"
+                    submit.onclick = function () {
+                        var nandu = $("#nandu_s option:selected").val()
+                        var celue = $("#celue_s option:selected").val()
+                        var yule = $("#yule_s option:selected").val()
+                        var suiji = $("#suiji_s option:selected").val()
+                        var hudong = $("#hudong_s option:selected").val()
+                        var dairu = $("#dairu_s option:selected").val()
+                        var meishu = $("#meishu_s option:selected").val()
+                        yyy.set("nandu", (yyy.nandu * yyy.num + nandu)/(yyy.num + 1))
+                        yyy.set("celue", (yyy.celue * yyy.num + celue)/(yyy.num + 1))
+                        yyy.set("yule", (yyy.yule * yyy.num + yule)/(yyy.num + 1))
+                        yyy.set("suiji", (yyy.suiji * yyy.num + suiji)/(yyy.num + 1))
+                        yyy.set("hudong", (yyy.hudong * yyy.num + hudong)/(yyy.num + 1))
+                        yyy.set("dairu", (yyy.dairu * yyy.num + dairu)/(yyy.num + 1))
+                        yyy.set("meishu", (yyy.meishu * yyy.num + meishu)/(yyy.num + 1))
+                        yyy.set("num", yyy.num+1);
+                        AV.Object.saveAll(boards);
+                        var obj = document.getElementById("btn_submit");
+                        obj.parentNode.removeChild(obj);
+                    }
                     let cancel = document.createElement('input')
                     cancel.type = 'button'
                     cancel.id = 'btn_cancel'
@@ -464,7 +484,7 @@ var imf = function () {
             a.appendChild(ul);
             document.getElementById('ddd').appendChild(a);
         }
-        
+
 
     }
 )();
