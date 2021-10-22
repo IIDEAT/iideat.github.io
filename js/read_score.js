@@ -374,6 +374,6 @@ var imf = function () {
             a.appendChild(ul);
             document.getElementById('ddd').appendChild(a);
         }
-
+}
 )();
 
