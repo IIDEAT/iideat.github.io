@@ -372,10 +372,11 @@ var imf = function () {
             a.rel = 'src/pic/' + yyy.name + '.png'
             a.id = yyy.name + '_show'
             $('body').on("click", "#" + a.id + "_img", function () {
+                let zzz= yyy;
                 if (onlyone == 0) {
                     onlyone = 1
                     let div = document.createElement('div')
-                    div.id = yyy.name + "_div"
+                    div.id = zzz.name + "_div"
                     div.style.background = "#F8F8F5";
                     div.style.borderStyle = "solid";
                     div.style.borderColor = "#D4D4D4";
@@ -393,7 +394,7 @@ var imf = function () {
                     header.style.padding = "5%";
                     header.style.textAlign = "center";
                     let h1 = document.createElement('h1')
-                    h1.innerText = yyy.name_cn;
+                    h1.innerText = zzz.name_cn;
                     header.appendChild(h1);
 
                     let bo1 = document.createElement('div')
@@ -411,10 +412,10 @@ var imf = function () {
                     bo2.style.border = "0";
                     bo2.style.float = "left";
                     bo2.style.textAlign = "center";
-                    bo2.innerHTML += "<h5 style='height:14%;'>" + yyy.nandu.toFixed(2) + "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.celue.toFixed(2) + "/5.00</h5>"
-                        + "<h5 style='height:14%;'>" + yyy.yule.toFixed(2) + "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.suiji.toFixed(2) + "/5.00</h5>"
-                        + "<h5 style='height:14%;'>" + yyy.hudong.toFixed(2) + "/5.00</h5>" + "<h5 style='height:14%;'>" + yyy.dairu.toFixed(2) + "/5.00</h5>"
-                        + "<h5 style='height:14%;'>" + yyy.meishu.toFixed(2) + "/5.00</h5>"
+                    bo2.innerHTML += "<h5 style='height:14%;'>" + zzz.nandu.toFixed(2) + "/5.00</h5>" + "<h5 style='height:14%;'>" + zzz.celue.toFixed(2) + "/5.00</h5>"
+                        + "<h5 style='height:14%;'>" + zzz.yule.toFixed(2) + "/5.00</h5>" + "<h5 style='height:14%;'>" + zzz.suiji.toFixed(2) + "/5.00</h5>"
+                        + "<h5 style='height:14%;'>" + zzz.hudong.toFixed(2) + "/5.00</h5>" + "<h5 style='height:14%;'>" + zzz.dairu.toFixed(2) + "/5.00</h5>"
+                        + "<h5 style='height:14%;'>" + zzz.meishu.toFixed(2) + "/5.00</h5>"
                     let bo3 = document.createElement('div')
                     bo3.style.height = "80%";
                     bo3.style.width = "32%";
@@ -438,6 +439,7 @@ var imf = function () {
                     submit.style.position = "relative"
                     submit.value = "确定"
                     submit.onclick = function () {
+                        let zzz = yyy
                         var nandu = $("#nandu_s option:selected").val()
                         var celue = $("#celue_s option:selected").val()
                         var yule = $("#yule_s option:selected").val()
@@ -446,24 +448,24 @@ var imf = function () {
                         var dairu = $("#dairu_s option:selected").val()
                         var meishu = $("#meishu_s option:selected").val()
                         
-                        if (yyy.name == "xuri")
+                        if (zzz.name == "xuri")
                         {
                             var id = "616fbf57e4378370b74e4210";
                         }
-                        else if (yyy.name == "shenmi")
+                        else if (zzz.name == "shenmi")
                         {
                             var id ="616fe19ee4378370b74e5d10";
                         }
                         const ooo = AV.Object.createWithoutData('zhuoban', id);
                         
-                        ooo.set("nandu", (yyy.nandu * yyy.num + parseInt(nandu))/(yyy.num + 1));
-                        ooo.set("celue", (yyy.celue * yyy.num + parseInt(celue))/(yyy.num + 1));
-                        ooo.set("yule", (yyy.yule * yyy.num + parseInt(yule))/(yyy.num + 1));
-                        ooo.set("suiji", (yyy.suiji * yyy.num + parseInt(suiji))/(yyy.num + 1));
-                        ooo.set("hudong", (yyy.hudong * yyy.num + parseInt(hudong))/(yyy.num + 1));
-                        ooo.set("dairu", (yyy.dairu * yyy.num + parseInt(dairu))/(yyy.num + 1));
-                        ooo.set("meishu", (yyy.meishu * yyy.num + parseInt(meishu))/(yyy.num + 1));
-                        ooo.set("num", yyy.num + 1);
+                        ooo.set("nandu", (zzz.nandu * zzz.num + parseInt(nandu))/(zzz.num + 1));
+                        ooo.set("celue", (zzz.celue * zzz.num + parseInt(celue))/(zzz.num + 1));
+                        ooo.set("yule", (zzz.yule * zzz.num + parseInt(yule))/(zzz.num + 1));
+                        ooo.set("suiji", (zzz.suiji * zzz.num + parseInt(suiji))/(zzz.num + 1));
+                        ooo.set("hudong", (zzz.hudong * zzz.num + parseInt(hudong))/(zzz.num + 1));
+                        ooo.set("dairu", (zzz.dairu * zzz.num + parseInt(dairu))/(zzz.num + 1));
+                        ooo.set("meishu", (zzz.meishu * zzz.num + parseInt(meishu))/(zzz.num + 1));
+                        ooo.set("num", zzz.num + 1);
                         ooo.save();
                        
                         var obj = document.getElementById("btn_submit");
@@ -479,7 +481,8 @@ var imf = function () {
                     cancel.style.position = "relative"
                     cancel.value = "关闭"
                     cancel.onclick = function () {
-                        var obj = document.getElementById(yyy.name + "_div");
+                        let zzz = yyy
+                        var obj = document.getElementById(zzz.name + "_div");
                         obj.parentNode.removeChild(obj);
                         onlyone = 0;
                     }
