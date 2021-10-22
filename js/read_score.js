@@ -467,7 +467,7 @@ var imf = function () {
             a.appendChild(ul);
             document.getElementById('ddd').appendChild(a);
         }
-        imf.create("imageFlow", 0.5, 1.5, 5);
+        
 
     }
 )();
