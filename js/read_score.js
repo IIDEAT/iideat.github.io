@@ -355,7 +355,7 @@ function task1() {
 
 
 (async function start() {
-    await task1();
+    
     var onlyone = 0;
     var query = new AV.Query('zhuoban');
     console.log("read");
@@ -472,6 +472,7 @@ function task1() {
         a.appendChild(ul);
         document.getElementById('ddd').appendChild(a);
     }}
+    await task1();
 )();
 
 
