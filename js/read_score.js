@@ -373,6 +373,7 @@ var imf = function () {
             a.id = yyy.name + '_show'
             $('body').on("click", "#" + a.id + "_img", function () {
                 let zzz= yyy;
+                console.log(zzz.name);
                 if (onlyone == 0) {
                     onlyone = 1
                     let div = document.createElement('div')
