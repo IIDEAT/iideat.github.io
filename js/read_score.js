@@ -444,15 +444,16 @@ var imf = function () {
                         var hudong = $("#hudong_s option:selected").val()
                         var dairu = $("#dairu_s option:selected").val()
                         var meishu = $("#meishu_s option:selected").val()
-                        yyy.set("nandu", (yyy.nandu * yyy.num + nandu)/(yyy.num + 1))
-                        yyy.set("celue", (yyy.celue * yyy.num + celue)/(yyy.num + 1))
-                        yyy.set("yule", (yyy.yule * yyy.num + yule)/(yyy.num + 1))
-                        yyy.set("suiji", (yyy.suiji * yyy.num + suiji)/(yyy.num + 1))
-                        yyy.set("hudong", (yyy.hudong * yyy.num + hudong)/(yyy.num + 1))
-                        yyy.set("dairu", (yyy.dairu * yyy.num + dairu)/(yyy.num + 1))
-                        yyy.set("meishu", (yyy.meishu * yyy.num + meishu)/(yyy.num + 1))
-                        yyy.set("num", yyy.num+1);
-                        AV.Object.saveAll(boards);
+                        const ooo = AV.Object.createWithoutData('zhuoban', yyy.objectId);
+                        
+                        ooo.set("nandu", (yyy.nandu * yyy.num + nandu)/(yyy.num + 1));
+                        ooo.set("celue", (yyy.celue * yyy.num + celue)/(yyy.num + 1));
+                        ooo.set("yule", (yyy.yule * yyy.num + yule)/(yyy.num + 1));
+                        ooo.set("suiji", (yyy.suiji * yyy.num + suiji)/(yyy.num + 1));
+                        ooo.set("hudong", (yyy.hudong * yyy.num + hudong)/(yyy.num + 1));
+                        ooo.set("dairu", (yyy.dairu * yyy.num + dairu)/(yyy.num + 1));
+                        ooo.save();
+                       
                         var obj = document.getElementById("btn_submit");
                         obj.parentNode.removeChild(obj);
                     }
