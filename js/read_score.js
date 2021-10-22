@@ -332,11 +332,10 @@ var imf = function () {
                             }
                             return false;
                         });
-                        (function () {
-                            var i = instances.length;
-
-                            while (i--) instances[i].run();
-                        })();
+                       setInterval(function() {
+							var i = instances.length;
+							while (i--) instances[i].run();
+						}, 16);
                     }
                 }
             }
