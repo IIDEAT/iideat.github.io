@@ -328,7 +328,7 @@ var imf = function(){
 							var i = instances.length;
 							
 							while (i--) instances[i].run();
-						}, 50);
+						}, 16);
 					}
 				}
 			}
