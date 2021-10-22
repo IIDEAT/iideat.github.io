@@ -4,11 +4,13 @@ AV.init({
     serverURL: "https://1wfqgrgg.lc-cn-n1-shared.com"
 });
 
-var onlyone = 0;
-var query = new AV.Query('zhuoban');
-console.log("read");
-query.equalTo('priority', 1);
-query.find().then((boards) => {
+(async function start() {
+    var onlyone = 0;
+    var query = new AV.Query('zhuoban');
+    console.log("read");
+    query.equalTo('priority', 1);
+    boards = await  query.find()
+
     let array = boards.map((xxx) => xxx.attributes)
     console.log("infunction");
     array.forEach((yyy => {
@@ -124,8 +126,9 @@ query.find().then((boards) => {
         // li.innerText = yyy.name
         // let boardlist = document.querySelector('#messageList')
         // boardlist.appendChild(li)
-    }))
-});
+    }));
+})();
+
 
 // let myForm = document.querySelector('#postMessage')
 // myForm.addEventListener('submit',(e)=>{
