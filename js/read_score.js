@@ -8,12 +8,14 @@ AV.init({
     var onlyone = 0;
     var query = new AV.Query('zhuoban');
     console.log("read");
-
+    query.equalTo('priority', 1);
     boards = await  query.find()
 
     let array = boards.map((xxx) => xxx.attributes)
     console.log("infunction");
-    array.forEach((yyy => {
+    for (let i = 0; i <array.length;i++)
+    {
+        yyy = array[i];
         let a = document.createElement('a')
         let ul = document.createElement('ul')
         let li_name = document.createElement('li')
@@ -122,11 +124,7 @@ AV.init({
 
         a.appendChild(ul);
         document.getElementById('ddd').appendChild(a);
-        // let li = document.createElement('li')
-        // li.innerText = yyy.name
-        // let boardlist = document.querySelector('#messageList')
-        // boardlist.appendChild(li)
-    }));
+    }
 })();
 
 
