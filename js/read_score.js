@@ -444,7 +444,7 @@ var imf = function () {
                         var hudong = $("#hudong_s option:selected").val()
                         var dairu = $("#dairu_s option:selected").val()
                         var meishu = $("#meishu_s option:selected").val()
-                        const ooo = AV.Object.createWithoutData('zhuoban', yyy.objectId);
+                        const ooo = AV.Object.createWithoutData('zhuoban', yyy.id);
                         
                         ooo.set("nandu", (yyy.nandu * yyy.num + nandu)/(yyy.num + 1));
                         ooo.set("celue", (yyy.celue * yyy.num + celue)/(yyy.num + 1));
