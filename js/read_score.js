@@ -350,7 +350,6 @@ var imf = function () {
 
 (async function start() {
 
-        var onlyone = 0;
         var query = new AV.Query('zhuoban');
         boards = await query.find()
         let array = boards.map((xxx) => xxx.attributes)
