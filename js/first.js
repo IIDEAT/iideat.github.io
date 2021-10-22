@@ -12,7 +12,8 @@ AV.init({
         let array = boards.map((xxx) => xxx.attributes)
         for (let i = 0; i < array.length; i++) {
             yyy = array[i];
-            document.getElementById(yyy.name + '_show' + "_img").onclick = function () {
+            var aaaaa = document.getElementById(yyy.name + '_show' + "_img");
+            aaaaa.onclick = function () {
                 let zzz= yyy;
                 if (onlyone == 0) {
                     onlyone = 1
