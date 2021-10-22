@@ -444,14 +444,23 @@ var imf = function () {
                         var hudong = $("#hudong_s option:selected").val()
                         var dairu = $("#dairu_s option:selected").val()
                         var meishu = $("#meishu_s option:selected").val()
-                        const ooo = AV.Object.createWithoutData('zhuoban', yyy.id);
                         
-                        ooo.set("nandu", (yyy.nandu * yyy.num + nandu)/(yyy.num + 1));
-                        ooo.set("celue", (yyy.celue * yyy.num + celue)/(yyy.num + 1));
-                        ooo.set("yule", (yyy.yule * yyy.num + yule)/(yyy.num + 1));
-                        ooo.set("suiji", (yyy.suiji * yyy.num + suiji)/(yyy.num + 1));
-                        ooo.set("hudong", (yyy.hudong * yyy.num + hudong)/(yyy.num + 1));
-                        ooo.set("dairu", (yyy.dairu * yyy.num + dairu)/(yyy.num + 1));
+                        if (yyy.name == "xuri")
+                        {
+                            var id = "616fbf57e4378370b74e4210";
+                        }
+                        else if (yyy.name == "shenmi")
+                        {
+                            var id ="616fe19ee4378370b74e5d10";
+                        }
+                        const ooo = AV.Object.createWithoutData('zhuoban', id);
+                        
+                        ooo.set("nandu", (yyy.nandu * yyy.num + parseInt(nandu))/(yyy.num + 1));
+                        ooo.set("celue", (yyy.celue * yyy.num + parseInt(celue))/(yyy.num + 1));
+                        ooo.set("yule", (yyy.yule * yyy.num + parseInt(yule))/(yyy.num + 1));
+                        ooo.set("suiji", (yyy.suiji * yyy.num + parseInt(suiji))/(yyy.num + 1));
+                        ooo.set("hudong", (yyy.hudong * yyy.num + parseInt(hudong))/(yyy.num + 1));
+                        ooo.set("dairu", (yyy.dairu * yyy.num + parseInt(dairu))/(yyy.num + 1));
                         ooo.save();
                        
                         var obj = document.getElementById("btn_submit");
