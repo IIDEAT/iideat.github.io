@@ -472,7 +472,7 @@ function task1() {
         a.appendChild(ul);
         document.getElementById('ddd').appendChild(a);
     }}
-    await task1();
+    await task1()
 )();
 
 
