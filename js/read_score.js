@@ -371,7 +371,7 @@ var imf = function () {
             ul.appendChild(li2);
             a.rel = 'src/pic/' + yyy.name + '.png'
             a.id = yyy.name + '_show'
-            $('body').on("click", "#" + a.id + "_img", function () {
+            a.onclick = function () {
                 let zzz= yyy;
                 console.log(zzz.name);
                 if (onlyone == 0) {
@@ -496,7 +496,7 @@ var imf = function () {
                     document.getElementById('imageFlow').appendChild(div);
                 }
                 
-            })
+            }
 
             a.appendChild(ul);
             document.getElementById('ddd').appendChild(a);
