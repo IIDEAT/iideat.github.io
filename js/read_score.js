@@ -371,7 +371,7 @@ var imf = function () {
             ul.appendChild(li2);
             a.rel = 'src/pic/' + yyy.name + '.png'
             a.id = yyy.name + '_show'
-            a.onclick = function () {
+            document.getElementById(a.id + "_img").onclick = function () {
                 let zzz= yyy;
                 console.log(zzz.name);
                 if (onlyone == 0) {
