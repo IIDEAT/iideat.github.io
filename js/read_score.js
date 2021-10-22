@@ -461,6 +461,8 @@ var imf = function () {
                         ooo.set("suiji", (yyy.suiji * yyy.num + parseInt(suiji))/(yyy.num + 1));
                         ooo.set("hudong", (yyy.hudong * yyy.num + parseInt(hudong))/(yyy.num + 1));
                         ooo.set("dairu", (yyy.dairu * yyy.num + parseInt(dairu))/(yyy.num + 1));
+                        ooo.set("meishu", (yyy.meishu * yyy.num + parseInt(meishu))/(yyy.num + 1));
+                        ooo.set("num", yyy.num + 1);
                         ooo.save();
                        
                         var obj = document.getElementById("btn_submit");
