@@ -352,10 +352,8 @@ var imf = function () {
 
         var onlyone = 0;
         var query = new AV.Query('zhuoban');
-        console.log("read");
         boards = await query.find()
         let array = boards.map((xxx) => xxx.attributes)
-        console.log("infunction");
         for (let i = 0; i < array.length; i++) {
             yyy = array[i];
             let a = document.createElement('a')
