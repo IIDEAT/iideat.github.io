@@ -6,9 +6,10 @@ AV.init({
 
 var onlyone = 0;
 var query = new AV.Query('zhuoban');
+console.log("read");
 query.find().then((boards) => {
     let array = boards.map((xxx) => xxx.attributes)
-
+    console.log("infunction");
     array.forEach((yyy => {
         let a = document.createElement('a')
         let ul = document.createElement('ul')
