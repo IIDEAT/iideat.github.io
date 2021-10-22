@@ -346,7 +346,7 @@ var imf = function () {
             });
         }
     }
-}
+}();
 
 
 (async function start() {
