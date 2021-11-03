@@ -38,7 +38,7 @@ AV.init({
                 th1.innerText = yyy.name;
                 tr1.appendChild(th1);
                 for (var key in dict1) {
-                    let score = dic[key];
+                    let score = dict1[key];
                     let yellow_star = parseInt(score);
                     let star_per = parseFloat(score - yellow_star) * 100;
                     let gray_star = parseInt(5 - score);
@@ -95,7 +95,7 @@ AV.init({
                 th2.innerText = "作\xa0\xa0者：" + yyy.author;
                 tr2.appendChild(th2);
                 for (var key in dict2) {
-                    let score = dic[key];
+                    let score = dict2[key];
                     let yellow_star = parseInt(score);
                     let star_per = parseFloat(score - yellow_star) * 100;
                     let gray_star = parseInt(5 - score);
@@ -154,7 +154,7 @@ AV.init({
 
                 let tr3 = document.createElement('tr')
                 for (var key in dict3) {
-                    let score = dic[key];
+                    let score = dict3[key];
                     let yellow_star = parseInt(score);
                     let star_per = parseFloat(score - yellow_star) * 100;
                     let gray_star = parseInt(5 - score);
