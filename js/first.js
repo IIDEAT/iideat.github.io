@@ -24,7 +24,7 @@ AV.init({
                 a.style.fontSize = "1.5rem";
                 a.id = "col"
                 let img = document.createElement('img')
-                img.url = './src/pic/' + yyy.name + '.png'
+                img.src = './src/pic/' + yyy.name + '.png'
                 a.appendChild(img);
                 let table = document.createElement('table')
 
@@ -35,7 +35,7 @@ AV.init({
                 let tr1 = document.createElement('tr')
                 let th1 = document.createElement('th')
                 th1.style.fontSize = "20px";
-                th1.innerText = yyy.name;
+                th1.innerText = yyy.name_cn;
                 tr1.appendChild(th1);
                 for (var key in dict1) {
                     let score = dict1[key];
@@ -53,13 +53,16 @@ AV.init({
                     view2.style.display = "flex";
                     view2.style.width = "80%";
                     view2.style.float = "left";
-                    let view_yellow = document.createElement('view')
-                    for (i = 0; i < yellow_star; i++) {
-                        let ystar = document.createElement('view')
-                        ystar.className = "icon icon_yellow";
-                        view_yellow.appendChild(ystar)
+                    if (yellow_star > 0)
+                    {
+                        let view_yellow = document.createElement('view')
+                        for (i = 0; i < yellow_star; i++) {
+                            let ystar = document.createElement('view')
+                            ystar.className = "icon icon_yellow";
+                            view_yellow.appendChild(ystar)
+                        }
+                        view2.appendChild(view_yellow)
                     }
-                    view2.appendChild(view_yellow)
                     if (star_per > 0) {
                         let view_half = document.createElement('view')
                         view_half.style.position = "relative";
@@ -76,13 +79,16 @@ AV.init({
                         view_half.appendChild(view_y)
                         view2.appendChild(view_half)
                     }
-                    let view_gray = document.createElement('view')
-                    for (i = 0; i < gray_star; i++) {
-                        let gstar = document.createElement('view')
-                        gstar.className = "icon icon_gray";
-                        view_gray.appendChild(gstar)
+                    if (gray_star > 0)
+                    {
+                        let view_gray = document.createElement('view')
+                        for (i = 0; i < gray_star; i++) {
+                            let gstar = document.createElement('view')
+                            gstar.className = "icon icon_gray";
+                            view_gray.appendChild(gstar)
+                        }
+                        view2.appendChild(view_gray)
                     }
-                    view2.appendChild(view_gray)
                     view1.appendChild(div)
                     view1.appendChild(view2)
                     th.appendChild(view1)
