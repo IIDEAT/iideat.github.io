@@ -1,52 +1,96 @@
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>桌瓣评分</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>桌瓣评分</title>
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+	<script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
 
 
 </head>
-<body>
-<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-<script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script>
 
-<!--演示内容开始-->
-<style type="text/css">
-*{margin:0;padding:0;list-style-type:none;}
-a,img{border:0;text-decoration:none;}
-body{font:24px/180% Arial, Helvetica, sans-serif, "微软雅黑";background:#F8F8F5;}
-/* imageFlow */
-#imageFlow{width:100%;height:100%;overflow:hidden;position:relative;top:50%;left: 50%;transform: translate(-50%, -50%)}
-#imageFlow .bank{visibility:hidden;overflow:hidden;}
-#imageFlow ul{height:20px;margin:0 auto;width:100%;text-align:center;}
-#imageFlow ul li{color:#333;font-size:20px;text-align:left;margin-left:30%;height:40px;line-height:20px;overflow:hidden;width:100%;vertical-align:bottom;}
-#imageFlow .arrow-left{position:absolute;z-index:1;left :5%;top:50%;}
-#imageFlow .arrow-right{position:absolute;z-index:1;right :5%;top:50%;}
-#imageFlow .ProTi{color:#ff6600;font-weight:bold;}
-#imageFlow .ProRmb{font-weight:bold;}
-#imageFlow .ProMo{color:#ff6600;cursor:pointer;}
+<style>
+	@font-face {
+		font-family: 'FontAwesome';
+		src: url('./font/fontawesome-webfont.woff') format('woff');
+	}
+	.star{margin-right:0.3rem;}/*五角星之间的间距*/
+	/*五角星*/
+	.star .icon:before {content: '\f005'; font-family: FontAwesome; position: absolute;left: 0;top: 0;display: block;  overflow: hidden;}
+	.star .icon {display: block; font-size: 21px; text-align: center; width: 1rem;height: 1.5rem;line-height: 1.5rem;position: relative;white-space: pre;}
+	/*灰色五角星*/
+	.star .icon_gray{color:#aaa}
+	/*黄色五角星*/
+	.star .icon_yellow:before {color: #F63;}
+	body {
+		/* 1ch 等于一个 0 的宽度 */
+		/* 1ch = 1个英文 = 1个数字 */
+		/* 2ch = 1个中文 */
+		/* auto-fill;
+        如果容器大小不固定，项目大小固定，可以用auto-fill关键字自动填充； */
+		/* 列 自动填充列，每列为30个字符宽度 */
+		grid-template-columns: repeat(auto-fit, 30ch);
+		place-content: center;
+		background-color: #F8F8F5;
+		/* 每个网格的间距为 5vh */
+		grid-gap: 5vh;
+		padding: 1rem;
+	}
+	#aaa {
+		width:90%;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		/* height: 25vh; */
+		/* 网格布局 */
+		display: grid;
+		/* grid-gap:20px 20px; */
+		/* row-gap和column-gap简写形式；行间距和列间距 */
+		grid-gap: 0.5rem;
+	}
+
+	#col {
+		border:1px solid black;
+		height:30vh;
+		font-size: 1.5rem;
+	}
 </style>
 
+<body>
 
-<div id="imageFlow">
-	<div class="bank" id ="ddd">
-		
+	<div id="aaa" class="aaaa">
+		<div id="col">
+			<img style="height:100%;width:20%" src="./src/pic/shenmi.png" />
+			<table style="height:100%;width:80%;float:right;text-align:left" >
+				<tr>
+					<th style="font-size:20px">旭日战魂录</th>
+					<th>难易度：</th>
+					<th>随机性：</th>
+					<th>美&nbsp;&nbsp;术：</th>
+				</tr>
+				<tr>
+					<th>作&nbsp;&nbsp;者：xxxxx</th>
+					<th>策略性：</th>
+					<th>互动感：</th>
+					<th style="text-align:center">共0人评分</th>
+				</tr>
+				<tr>
+					<th >
+						<view style="width:100%;">
+							<div style="width:20%;float:left;">评&nbsp;&nbsp;分：</div>
+							<view style="display:flex;width:80%;float:left">
+								<view class="star" wx:for="3"><view class="icon icon_yellow"></view></view>
 
+								<view class="star" wx:for="2"><view class="icon icon_gray"></view></view>
+							</view>
+						</view>
+					</th>
+					<th>娱乐性：</th>
+					<th>代入感：</th>
+					<th style="text-align:center"><button type="button">我也要打分</button></th>
+				</tr>
+			</table>
+		</div>
 	</div>
-	
-
-	<div class="scrollbar">
-		<img class="arrow-left" src="src/pic/btn_left.png" alt="" />
-		<img class="arrow-right" src="src/pic/btn_right.png" alt="" />
-	</div>
-	
-</div> 
-<script src="js/read_score.js" version=1.0.1></script>
-	
-<script>
-	imf.create("imageFlow", 0.5, 1.5, 5);
-</script>
-
-<script src="js/first.js" version=1.0.1></script>
-<script src="js/DDPngMin.js"></script>
-
 </body>
+
 </html>
