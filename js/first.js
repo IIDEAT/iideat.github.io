@@ -24,6 +24,8 @@ AV.init({
                 a.style.fontSize = "1.5rem";
                 a.id = "col"
                 let img = document.createElement('img')
+                img.style.height = "100%";
+                img.style.width = "20%";
                 img.src = './src/pic/' + yyy.name + '.png'
                 a.appendChild(img);
                 let table = document.createElement('table')
