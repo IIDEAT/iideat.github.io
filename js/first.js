@@ -13,10 +13,13 @@ AV.init({
             var dict1 = {"难易度": yyy.nandu, "随机性": yyy.suiji, "美\xa0\xa0术": yyy.meishu}
             var dict2 = {"策略性": yyy.celue, "互动感": yyy.hudong}
             var dict3 = {"评\xa0\xa0分": ((yyy.nandu + yyy.suiji + yyy.yule + yyy.celue + yyy.dairu + yyy.hudong + yyy.meishu) / 7).toFixed(2), "娱乐性": yyy.yule, "代入感": yyy.dairu}
-
+            let a = document.createElement('div')
+            a.style.height = "30vh";
+            a.style.fontSize = "1.5rem";
+            a.id = "col"
             let img = document.createElement('img')
             img.url = './src/pic/' + yyy.name + '.png'
-            document.getElementById('col').appendChild(img);
+            a.appendChild(img);
             let table = document.createElement('table')
 
             table.style.height = "100%";
@@ -85,7 +88,10 @@ AV.init({
             table.appendChild(tr1)
 
             let tr2 = document.createElement('tr')
-            for (var key in dict3) {
+            let th2 = document.createElement('th')
+            th2.innerText = "作\xa0\xa0者：" + yyy.author;
+            tr2.appendChild(th2);
+            for (var key in dict2) {
                 let score = dic[key];
                 let yellow_star = parseInt(score);
                 let star_per = parseFloat(score - yellow_star) * 100;
@@ -144,71 +150,66 @@ AV.init({
             th_e.innerText = "共" + (yyy.num).toString() + "人评分";
             tr2.appendChild(th_e)
             table.appendChild(tr2)
-        }
-        table.appendChild(tr2)
 
 
-        let tr3 = document.createElement('tr')
-        let th3 = document.createElement('th')
-        th3.style.fontSize = "20px";
-        th3.innerText = yyy.name;
-        tr3.appendChild(th3);
-        for (var key in dict3) {
-            let score = dic[key];
-            let yellow_star = parseInt(score);
-            let star_per = parseFloat(score - yellow_star) * 100;
-            let gray_star = parseInt(5 - score);
-            let th = document.createElement('th')
-            let view1 = document.createElement('view')
-            view1.style.width = "100%";
-            let div = document.createElement('div')
-            div.style.width = "20%";
-            div.style.float = "left";
-            div.innerText = key + "：";
-            let view2 = document.createElement('view')
-            view2.style.display = "flex";
-            view2.style.width = "80%";
-            view2.style.float = "left";
-            let view_yellow = document.createElement('view')
-            for (i=0;i<yellow_star;i++)
-            {
-                let ystar = document.createElement('view')
-                ystar.className = "icon icon_yellow";
-                view_yellow.appendChild(ystar)
+            let tr3 = document.createElement('tr')
+            for (var key in dict3) {
+                let score = dic[key];
+                let yellow_star = parseInt(score);
+                let star_per = parseFloat(score - yellow_star) * 100;
+                let gray_star = parseInt(5 - score);
+                let th = document.createElement('th')
+                let view1 = document.createElement('view')
+                view1.style.width = "100%";
+                let div = document.createElement('div')
+                div.style.width = "20%";
+                div.style.float = "left";
+                div.innerText = key + "：";
+                let view2 = document.createElement('view')
+                view2.style.display = "flex";
+                view2.style.width = "80%";
+                view2.style.float = "left";
+                let view_yellow = document.createElement('view')
+                for (i=0;i<yellow_star;i++)
+                {
+                    let ystar = document.createElement('view')
+                    ystar.className = "icon icon_yellow";
+                    view_yellow.appendChild(ystar)
+                }
+                view2.appendChild(view_yellow)
+                if (star_per > 0)
+                {
+                    let view_half= document.createElement('view')
+                    view_half.style.position = "relative";
+                    let view_g= document.createElement('view')
+                    view_g.className = "icon icon_gray";
+                    view_half.appendChild(view_g)
+                    let view_y= document.createElement('view')
+                    view_y.className = "icon icon_yellow";
+                    view_y.style.width = star_per.toString() + "%";
+                    view_y.style.overflow = "hidden";
+                    view_y.style.position = "absolute";
+                    view_y.style.left = "0";
+                    view_y.style.top = "0";
+                    view_half.appendChild(view_y)
+                    view2.appendChild(view_half)
+                }
+                let view_gray = document.createElement('view')
+                for (i=0;i<gray_star;i++)
+                {
+                    let gstar = document.createElement('view')
+                    gstar.className = "icon icon_gray";
+                    view_gray.appendChild(gstar)
+                }
+                view2.appendChild(view_gray)
+                view1.appendChild(div)
+                view1.appendChild(view2)
+                th.appendChild(view1)
+                tr3.appendChild(th)
             }
-            view2.appendChild(view_yellow)
-            if (star_per > 0)
-            {
-                let view_half= document.createElement('view')
-                view_half.style.position = "relative";
-                let view_g= document.createElement('view')
-                view_g.className = "icon icon_gray";
-                view_half.appendChild(view_g)
-                let view_y= document.createElement('view')
-                view_y.className = "icon icon_yellow";
-                view_y.style.width = star_per.toString() + "%";
-                view_y.style.overflow = "hidden";
-                view_y.style.position = "absolute";
-                view_y.style.left = "0";
-                view_y.style.top = "0";
-                view_half.appendChild(view_y)
-                view2.appendChild(view_half)
-            }
-            let view_gray = document.createElement('view')
-            for (i=0;i<gray_star;i++)
-            {
-                let gstar = document.createElement('view')
-                gstar.className = "icon icon_gray";
-                view_gray.appendChild(gstar)
-            }
-            view2.appendChild(view_gray)
-            view1.appendChild(div)
-            view1.appendChild(view2)
-            th.appendChild(view1)
-            tr3.appendChild(th)
-        }
-        table.appendChild(tr3)
- 
+            table.appendChild(tr3)
+            a.appendChild(table)
+            document.getElementById("aaa").appendChild(a)
         // for (let i = 0; i < array.length; i++) {
         //     yyy = array[i];
         //     document.getElementById(yyy.name + '_show' + "_img").onclick = function () {
@@ -335,6 +336,7 @@ AV.init({
         //     }
         //
         // }
+        }
 
     }
 )();
