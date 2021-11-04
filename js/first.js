@@ -106,7 +106,6 @@ AV.init({
                             view_gray.appendChild(gstar)
                         }
                         view2.appendChild(view_gray)
-                  
                     }
                     view1.appendChild(div)
                     view1.appendChild(view2)
@@ -120,8 +119,8 @@ AV.init({
                 th2.innerText = "作\xa0\xa0者：" + yyy.author;
                 tr2.appendChild(th2);
                 for (var key in dict2) {
-                    let score = dict2[key];
-               
+                    // let score = dict2[key];
+                    let score = 3.5;
                     let yellow_star = parseInt(score);
                     let star_per = parseFloat(score - yellow_star) * 100;
                     let gray_star = parseInt(5 - score);
@@ -343,7 +342,7 @@ AV.init({
                         submit.style.left = "10%"
                         submit.style.position = "relative"
                         submit.value = "确定"
-                        submit.onclick = function dasd() {
+                        submit.onclick = function () {
                             let zzz = yyy
                             var nandu = $("#nandu_s option:selected").val()
                             var celue = $("#celue_s option:selected").val()
@@ -424,15 +423,15 @@ AV.init({
                         div.appendChild(cancel);
                         document.getElementById('aaa').appendChild(div);
                     }
+
+
+
+
+                }
                 tr3.appendChild(button);
                 table.appendChild(tr3)
                 a.appendChild(table)
                 document.get("aaa").appendChild(a);
-
-                
-
-                }
-
             }
             ))
         }
