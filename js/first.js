@@ -289,19 +289,18 @@ AV.init({
                         div.style.height = "80%";
                         div.style.width = "30%";
                         div.style.zIndex = 9999;
-                        div.style.position = 'relative';
+                        div.style.position = 'absolute';
                         div.style.top = "40%";
                         div.style.left = "50%";
                         div.style.boxShadow = "2px 2px 5px #000";
                         div.style.transform = "translate(-50%, -50%)";
-
+                        div.style.position = "absolute"
                         let header = document.createElement('div')
                         header.style.padding = "5%";
                         header.style.textAlign = "center";
                         let h1 = document.createElement('h1')
                         h1.innerText = zzz.name_cn;
                         header.appendChild(h1);
-
                         let bo1 = document.createElement('div')
                         bo1.style.height = "80%";
                         bo1.style.width = "33%";
