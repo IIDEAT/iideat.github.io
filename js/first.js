@@ -64,6 +64,10 @@ AV.init({
                             let ystar = document.createElement('view')
                             ystar.className = "icon icon_yellow";
                             ystar.style.float = "left";
+                            if (! (i == yellow_star - 1 && star_per > 0))
+                            {
+                                ystar.style.marginRight = "0.3rem";
+                            }
                             view_yellow.appendChild(ystar)
                         }
                         view2.appendChild(view_yellow)
@@ -136,6 +140,10 @@ AV.init({
                             let ystar = document.createElement('view')
                             ystar.className = "icon icon_yellow";
                             ystar.style.float = "left";
+                            if (! (i == yellow_star - 1 && star_per > 0))
+                            {
+                                ystar.style.marginRight = "0.3rem";
+                            }
                             view_yellow.appendChild(ystar)
                         }
                         view2.appendChild(view_yellow)
@@ -208,6 +216,10 @@ AV.init({
                             let ystar = document.createElement('view')
                             ystar.className = "icon icon_yellow";
                             ystar.style.float = "left";
+                            if (! (i == yellow_star - 1 && star_per > 0))
+                            {
+                                ystar.style.marginRight = "0.3rem";
+                            }
                             view_yellow.appendChild(ystar)
                         }
                         view2.appendChild(view_yellow)
