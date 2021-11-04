@@ -62,6 +62,7 @@ AV.init({
                     if (yellow_star > 0)
                     {
                         let view_yellow = document.createElement('view')
+                        view_yellow.className = 'star';
                         for (i = 0; i < yellow_star; i++) {
                             let ystar = document.createElement('view')
                             ystar.className = "icon icon_yellow";
@@ -71,6 +72,8 @@ AV.init({
                     }
                     if (star_per > 0) {
                         let view_half = document.createElement('view')
+                        view_half.style.position = "relative";
+                        view_half.className = 'star';
                         view_half.style.position = "relative";
                         let view_g = document.createElement('view')
                         view_g.className = "icon icon_gray";
@@ -88,6 +91,7 @@ AV.init({
                     if (gray_star > 0)
                     {
                         let view_gray = document.createElement('view')
+                        view_gray.className = 'star';
                         for (i = 0; i < gray_star; i++) {
                             let gstar = document.createElement('view')
                             gstar.className = "icon icon_gray";
