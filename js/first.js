@@ -62,6 +62,7 @@ AV.init({
                         for (i = 0; i < yellow_star; i++) {
                             let ystar = document.createElement('view')
                             ystar.className = "icon icon_yellow";
+                            ystar.style.float = "left";
                             view_yellow.appendChild(ystar)
                         }
                         view2.appendChild(view_yellow)
@@ -72,9 +73,11 @@ AV.init({
                         view_half.className = 'star';
                         let view_g = document.createElement('view')
                         view_g.className = "icon icon_gray";
+                        view_g.style.float = "left";
                         view_half.appendChild(view_g)
                         let view_y = document.createElement('view')
                         view_y.className = "icon icon_yellow";
+                        view_y.style.float = "left";
                         view_y.style.width = star_per.toString() + "%";
                         view_y.style.overflow = "hidden";
                         view_y.style.position = "absolute";
@@ -90,6 +93,7 @@ AV.init({
                         for (i = 0; i < gray_star; i++) {
                             let gstar = document.createElement('view')
                             gstar.className = "icon icon_gray";
+                            gstar.style.float = "left";
                             view_gray.appendChild(gstar)
                         }
                         view2.appendChild(view_gray)
@@ -106,10 +110,12 @@ AV.init({
                 th2.innerText = "作\xa0\xa0者：" + yyy.author;
                 tr2.appendChild(th2);
                 for (var key in dict2) {
-                    let score = dict2[key];
+                    // let score = dict2[key];
+                    let score = 3.5;
                     let yellow_star = parseInt(score);
                     let star_per = parseFloat(score - yellow_star) * 100;
                     let gray_star = parseInt(5 - score);
+
                     let th = document.createElement('th')
                     let view1 = document.createElement('view')
                     view1.style.width = "100%";
@@ -128,6 +134,7 @@ AV.init({
                         for (i = 0; i < yellow_star; i++) {
                             let ystar = document.createElement('view')
                             ystar.className = "icon icon_yellow";
+                            ystar.style.float = "left";
                             view_yellow.appendChild(ystar)
                         }
                         view2.appendChild(view_yellow)
@@ -138,10 +145,12 @@ AV.init({
                         view_half.className = 'star';
                         let view_g = document.createElement('view')
                         view_g.className = "icon icon_gray";
+                        view_g.style.float = "left";
                         view_half.appendChild(view_g)
                         let view_y = document.createElement('view')
                         view_y.className = "icon icon_yellow";
                         view_y.style.width = star_per.toString() + "%";
+                        view_y.style.float = "left";
                         view_y.style.overflow = "hidden";
                         view_y.style.position = "absolute";
                         view_y.style.left = "0";
@@ -156,6 +165,7 @@ AV.init({
                         for (i = 0; i < gray_star; i++) {
                             let gstar = document.createElement('view')
                             gstar.className = "icon icon_gray";
+                            gstar.style.float = "left";
                             view_gray.appendChild(gstar)
                         }
                         view2.appendChild(view_gray)
@@ -196,6 +206,7 @@ AV.init({
                         for (i = 0; i < yellow_star; i++) {
                             let ystar = document.createElement('view')
                             ystar.className = "icon icon_yellow";
+                            ystar.style.float = "left";
                             view_yellow.appendChild(ystar)
                         }
                         view2.appendChild(view_yellow)
@@ -206,9 +217,11 @@ AV.init({
                         view_half.className = 'star';
                         let view_g = document.createElement('view')
                         view_g.className = "icon icon_gray";
+                        view_g.style.float = "left";
                         view_half.appendChild(view_g)
                         let view_y = document.createElement('view')
                         view_y.className = "icon icon_yellow";
+                        view_y.style.float = "left";
                         view_y.style.width = star_per.toString() + "%";
                         view_y.style.overflow = "hidden";
                         view_y.style.position = "absolute";
@@ -224,6 +237,7 @@ AV.init({
                         for (i = 0; i < gray_star; i++) {
                             let gstar = document.createElement('view')
                             gstar.className = "icon icon_gray";
+                            gstar.style.float = "left";
                             view_gray.appendChild(gstar)
                         }
                         view2.appendChild(view_gray)
