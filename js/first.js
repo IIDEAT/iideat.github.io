@@ -99,6 +99,10 @@ AV.init({
                             let gstar = document.createElement('view')
                             gstar.className = "icon icon_gray";
                             gstar.style.float = "left";
+                            if (! (i == gray_star - 1 ))
+                            {
+                                gstar.style.marginRight = "0.3rem";
+                            }
                             view_gray.appendChild(gstar)
                         }
                         view2.appendChild(view_gray)
@@ -175,6 +179,10 @@ AV.init({
                             let gstar = document.createElement('view')
                             gstar.className = "icon icon_gray";
                             gstar.style.float = "left";
+                            if (! (i == gray_star - 1 ))
+                            {
+                                gstar.style.marginRight = "0.3rem";
+                            }
                             view_gray.appendChild(gstar)
                         }
                         view2.appendChild(view_gray)
@@ -251,6 +259,10 @@ AV.init({
                             let gstar = document.createElement('view')
                             gstar.className = "icon icon_gray";
                             gstar.style.float = "left";
+                            if (! (i == gray_star - 1 ))
+                            {
+                                gstar.style.marginRight = "0.3rem";
+                            }
                             view_gray.appendChild(gstar)
                         }
                         view2.appendChild(view_gray)
