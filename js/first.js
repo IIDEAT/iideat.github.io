@@ -24,8 +24,6 @@ AV.init({
                 a.style.fontSize = "1.5rem";
                 a.id = "col"
                 let img = document.createElement('img')
-                img.style.height = "100%";
-                img.style.width = "20%";
                 img.src = './src/pic/' + yyy.name + '.png'
                 a.appendChild(img);
                 let table = document.createElement('table')
@@ -40,10 +38,14 @@ AV.init({
                 th1.innerText = yyy.name_cn;
                 tr1.appendChild(th1);
                 for (var key in dict1) {
-                    let score = dict1[key];
+                    let score = parseFloat(dict1[key]);
                     let yellow_star = parseInt(score);
                     let star_per = parseFloat(score - yellow_star) * 100;
                     let gray_star = parseInt(5 - score);
+                    console.log(score)
+                    console.log(yellow_star)
+                    console.log(star_per)
+                    console.log(gray_star)
                     let th = document.createElement('th')
                     let view1 = document.createElement('view')
                     view1.style.width = "100%";
