@@ -431,7 +431,7 @@ AV.init({
                 tr3.appendChild(button);
                 table.appendChild(tr3)
                 a.appendChild(table)
-                document.get("aaa").appendChild(a);
+                document.getElementById("aaa").appendChild(a);
             }
             ))
         }
