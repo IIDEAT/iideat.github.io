@@ -117,10 +117,11 @@ AV.init({
                 let tr2 = document.createElement('tr')
                 let th2 = document.createElement('th')
                 th2.innerText = "作\xa0\xa0者：" + yyy.author;
+                th2.style.width = "20%"
                 tr2.appendChild(th2);
                 for (var key in dict2) {
-                    // let score = dict2[key];
-                    let score = 3.5;
+                    let score = dict2[key];
+                    // let score = 3.5;
                     let yellow_star = parseInt(score);
                     let star_per = parseFloat(score - yellow_star) * 100;
                     let gray_star = parseInt(5 - score);
