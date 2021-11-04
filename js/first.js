@@ -286,7 +286,7 @@ AV.init({
                         div.style.borderStyle = "solid";
                         div.style.borderColor = "#D4D4D4";
                         div.style.borderWidth = "1px";
-                        div.style.height = "80%";
+                        div.style.height = "40vh";
                         div.style.width = "30%";
                         div.style.zIndex = 9999;
                         div.style.position = 'absolute';
