@@ -22,7 +22,7 @@ AV.init({
                 let a = document.createElement('div')
                 a.style.height = "30vh";
                 a.style.fontSize = "1.5rem";
-                a.id = "col"
+                a.className = "col"
                 let img = document.createElement('img')
                 img.src = './src/pic/' + yyy.name + '.png';
                 img.style.width = "20%";
