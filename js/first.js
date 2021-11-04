@@ -272,6 +272,10 @@ AV.init({
                     th.appendChild(view1)
                     tr3.appendChild(th)
                 }
+                let button = document.createElement('button');
+                button.type = 'button';
+                button.innerText = '我要打分';
+                tr3.appendChild(button);
                 table.appendChild(tr3)
                 a.appendChild(table)
                 document.getElementById("aaa").appendChild(a)
