@@ -26,6 +26,7 @@ AV.init({
                 let img = document.createElement('img')
                 img.src = './src/pic/' + yyy.name + '.png';
                 img.style.width = "20%";
+                img.style.height = "100%";
                 img.style.float = "left";
                 a.appendChild(img);
                 let table = document.createElement('table')
@@ -48,12 +49,12 @@ AV.init({
                     let view1 = document.createElement('view')
                     view1.style.width = "100%";
                     let div = document.createElement('div')
-                    div.style.width = "20%";
+                    div.style.width = "25%";
                     div.style.float = "left";
                     div.innerText = key + "：";
                     let view2 = document.createElement('view')
                     view2.style.display = "flex";
-                    view2.style.width = "80%";
+                    view2.style.width = "75%";
                     view2.style.float = "left";
                     if (yellow_star > 0)
                     {
@@ -120,12 +121,12 @@ AV.init({
                     let view1 = document.createElement('view')
                     view1.style.width = "100%";
                     let div = document.createElement('div')
-                    div.style.width = "20%";
+                    div.style.width = "25%";
                     div.style.float = "left";
                     div.innerText = key + "：";
                     let view2 = document.createElement('view')
                     view2.style.display = "flex";
-                    view2.style.width = "80%";
+                    view2.style.width = "75%";
                     view2.style.float = "left";
                     if (yellow_star > 0)
                     {
@@ -192,12 +193,12 @@ AV.init({
                     let view1 = document.createElement('view')
                     view1.style.width = "100%";
                     let div = document.createElement('div')
-                    div.style.width = "20%";
+                    div.style.width = "25%";
                     div.style.float = "left";
                     div.innerText = key + "：";
                     let view2 = document.createElement('view')
                     view2.style.display = "flex";
-                    view2.style.width = "80%";
+                    view2.style.width = "75%";
                     view2.style.float = "left";
                     if (yellow_star > 0)
                     {
