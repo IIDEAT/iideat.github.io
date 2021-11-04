@@ -287,10 +287,10 @@ AV.init({
                         div.style.borderColor = "#D4D4D4";
                         div.style.borderWidth = "1px";
                         div.style.height = "50vh";
-                        div.style.width = "30vh";
+                        div.style.width = "30%";
                         div.style.zIndex = 9999;
                         div.style.position = 'absolute';
-                        div.style.top = "40%";
+                        div.style.top = "40vh";
                         div.style.left = "50%";
                         div.style.boxShadow = "2px 2px 5px #000";
                         div.style.transform = "translate(-50%, -50%)";
