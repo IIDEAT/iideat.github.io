@@ -319,11 +319,10 @@ function getScrollTop(){
                         bo1.style.border = "0";
                         bo1.style.float = "left";
                         bo1.style.textAlign = "center";
-                        bo1.innerHTML += "<h5 style='height:14%;margin:0%;line-height:65px'>规则难易</h5><h5 style='height:14%;margin:0%;line-height:65px'>策略性</h5>
-                        <h5 style='height:14%;margin:0%;line-height:65px'>娱乐性</h5>" +
-                            "<h5 style='height:14%;margin:0%;line-height:65px'>随机性</h5><h5 style='height:14%;margin:0%;line-height:65px'>互动感</h5>
-                        <h5 style='height:14%;margin:0%;line-height:65px'>代入感</h5>
-                        <h5 style='height:14%;margin:0%;line-height:65px'>美术</h5>"
+                        bo1.innerHTML += "<h5 style='height:14%;margin:0%;line-height:65px'>规则难易</h5>"
+                        + "<h5 style='height:14%;margin:0%;line-height:65px'>策略性</h5>" + "<h5 style='height:14%;margin:0%;line-height:65px'>娱乐性</h5>"
+                        + "<h5 style='height:14%;margin:0%;line-height:65px'>随机性</h5>" + "<h5 style='height:14%;margin:0%;line-height:65px'>互动感</h5>"
+                        + "<h5 style='height:14%;margin:0%;line-height:65px'>代入感</h5>" + "<h5 style='height:14%;margin:0%;line-height:65px'>美术</h5>"
 
                         
                         let bo3 = document.createElement('div')
