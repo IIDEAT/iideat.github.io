@@ -297,7 +297,7 @@ function getScrollTop(){
                         div.style.borderWidth = "1px";
                         //console.log(getScrollTop());
                         //console.log($(window).height());
-                        div.style.height = "80vh";
+                        div.style.height = "85vh";
                        // console.log(div.style.height);
                         div.style.width = "30%";
                         div.style.zIndex = 9999;
@@ -308,7 +308,7 @@ function getScrollTop(){
                         div.style.transform = "translate(-50%, -50%)";
                         div.style.position = "absolute"
                         let header = document.createElement('div')
-                        header.style.padding = "2.5%";
+                        header.style.padding = "0%";
                         header.style.textAlign = "center";
                         let h1 = document.createElement('h1')
                         h1.innerText = zzz.name_cn;
@@ -345,8 +345,9 @@ function getScrollTop(){
                         submit.style.width = "30%"
                         submit.style.float = 'left'
                         submit.style.left = "10%"
-                        submit.style.position = "relative"
+                        submit.style.position = "absolute"
                         submit.value = "确定"
+                        submit.style.top = "90%";
                         submit.onclick = function () {
                             let zzz = yyy
                             var nandu = $("#nandu_s option:selected").val()
@@ -415,8 +416,9 @@ function getScrollTop(){
                         cancel.style.width = "30%"
                         cancel.style.float = 'right'
                         cancel.style.right = "10%"
-                        cancel.style.position = "relative"
+                        cancel.style.position = "absolute"
                         cancel.value = "关闭"
+                        cancel.style.top ="90%"
                         cancel.onclick = function () {
                             let zzz = yyy
                             var obj = document.getElementById(zzz.name + "_div");
