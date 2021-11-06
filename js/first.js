@@ -319,19 +319,13 @@ function getScrollTop(){
                         bo1.style.border = "0";
                         bo1.style.float = "left";
                         bo1.style.textAlign = "center";
-                        bo1.innerHTML += "<h5 style='height:14%;'>规则难易</h5><h5 style='height:14%;'>策略性</h5><h5 style='height:14%;'>娱乐性</h5>" +
-                            "<h5 style='height:14%;'>随机性</h5><h5 style='height:14%;'>互动感</h5><h5 style='height:14%;'>代入感</h5><h5 style='height:14%;'>美术</h5>"
+                        bo1.innerHTML += "<h5 style='height:14%;margin:0%;line-height:65px'>规则难易</h5><h5 style='height:14%;margin:0%;line-height:65px'>策略性</h5>
+                        <h5 style='height:14%;margin:0%;line-height:65px'>娱乐性</h5>" +
+                            "<h5 style='height:14%;margin:0%;line-height:65px'>随机性</h5><h5 style='height:14%;margin:0%;line-height:65px'>互动感</h5>
+                        <h5 style='height:14%;margin:0%;line-height:65px'>代入感</h5>
+                        <h5 style='height:14%;margin:0%;line-height:65px'>美术</h5>"
 
-                        let bo2 = document.createElement('div')
-                        bo2.style.height = "80%";
-                        bo2.style.width = "33%";
-                        bo2.style.border = "0";
-                        bo2.style.float = "left";
-                        bo2.style.textAlign = "center";
-                        bo2.innerHTML += "<h5 style='height:14%;'>" + zzz.nandu.toFixed(2) + "/5.00</h5>" + "<h5 style='height:14%;'>" + zzz.celue.toFixed(2) + "/5.00</h5>"
-                            + "<h5 style='height:14%;'>" + zzz.yule.toFixed(2) + "/5.00</h5>" + "<h5 style='height:14%;'>" + zzz.suiji.toFixed(2) + "/5.00</h5>"
-                            + "<h5 style='height:14%;'>" + zzz.hudong.toFixed(2) + "/5.00</h5>" + "<h5 style='height:14%;'>" + zzz.dairu.toFixed(2) + "/5.00</h5>"
-                            + "<h5 style='height:14%;'>" + zzz.meishu.toFixed(2) + "/5.00</h5>"
+                        
                         let bo3 = document.createElement('div')
                         bo3.style.height = "80%";
                         bo3.style.width = "32%";
@@ -432,7 +426,6 @@ function getScrollTop(){
                         }
                         div.appendChild(header);
                         div.appendChild(bo1);
-                        div.appendChild(bo2);
                         div.appendChild(bo3);
                         div.appendChild(submit);
                         div.appendChild(cancel);
