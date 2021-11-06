@@ -381,10 +381,13 @@ AV.init({
                             else if (zzz.name == "furao") {
                                 var id = "6183484fcd64666bf22cf533";
                             }
-                            else if (zzz.name == "nuhai") {
-                                var id = "6183486acd64666bf22cf53e";
+                            else if (zzz.name == "siwang") {
+                                var id = "61862c4ad8fdcf4cc725e651";
                             }
-
+                            else if (zzz.name == "cuican") {
+                                var id = "61863c16d8fdcf4cc725f58c";
+                            }
+                            
                             const ooo = AV.Object.createWithoutData('zhuoban', id);
 
                             ooo.set("nandu", (zzz.nandu * zzz.num + parseInt(nandu)) / (zzz.num + 1));
