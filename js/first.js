@@ -347,7 +347,7 @@ function getScrollTop(){
                         submit.style.left = "10%"
                         submit.style.position = "absolute"
                         submit.value = "确定"
-                        submit.style.top = "90%";
+                        submit.style.top = "92%";
                         submit.onclick = function () {
                             let zzz = yyy
                             var nandu = $("#nandu_s option:selected").val()
@@ -418,7 +418,7 @@ function getScrollTop(){
                         cancel.style.right = "10%"
                         cancel.style.position = "absolute"
                         cancel.value = "关闭"
-                        cancel.style.top ="90%"
+                        cancel.style.top ="92%"
                         cancel.onclick = function () {
                             let zzz = yyy
                             var obj = document.getElementById(zzz.name + "_div");
