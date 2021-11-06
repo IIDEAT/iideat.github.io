@@ -295,20 +295,20 @@ function getScrollTop(){
                         div.style.borderStyle = "solid";
                         div.style.borderColor = "#D4D4D4";
                         div.style.borderWidth = "1px";
-                        console.log(getScrollTop());
-                        console.log($(window).height());
-                        div.style.height = ($(window).height() * 0.7 + getScrollTop()).toString() + "px";
-                        console.log(div.style.height);
+                        //console.log(getScrollTop());
+                        //console.log($(window).height());
+                        div.style.height = "70vh";
+                       // console.log(div.style.height);
                         div.style.width = "30%";
                         div.style.zIndex = 9999;
                         div.style.position = 'absolute';
-                        div.style.top = "40vh";
+                        div.style.top = ($(window).height() * 0.4 + getScrollTop()).toString() + "px";
                         div.style.left = "50%";
                         div.style.boxShadow = "2px 2px 5px #000";
                         div.style.transform = "translate(-50%, -50%)";
                         div.style.position = "absolute"
                         let header = document.createElement('div')
-                        header.style.padding = "5%";
+                        header.style.padding = "2.5%";
                         header.style.textAlign = "center";
                         let h1 = document.createElement('h1')
                         h1.innerText = zzz.name_cn;
