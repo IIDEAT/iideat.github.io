@@ -3,6 +3,15 @@ AV.init({
     appKey: "wHzWdO649dBr7q09CuunEv5i",
     serverURL: "https://1wfqgrgg.lc-cn-n1-shared.com"
 });
+function getScrollTop(){
+        var scrollTop=0;
+        if(document.documentElement&&document.documentElement.scrollTop){
+            scrollTop=document.documentElement.scrollTop;
+        }else if(document.body){
+            scrollTop=document.body.scrollTop;
+        }
+        return scrollTop;
+    }
 (function () {
     var onlyone = 0;
     var query = new AV.Query('zhuoban');
@@ -286,7 +295,10 @@ AV.init({
                         div.style.borderStyle = "solid";
                         div.style.borderColor = "#D4D4D4";
                         div.style.borderWidth = "1px";
-                        div.style.height = "50vh";
+                        console.log(getScrollTop());
+                        console.log($(window).height());
+                        div.style.height = ($(window).height() * 0.7 + getScrollTop()).toString() + "px";
+                        console.log(div.style.height);
                         div.style.width = "30%";
                         div.style.zIndex = 9999;
                         div.style.position = 'absolute';
