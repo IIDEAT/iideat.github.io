@@ -297,7 +297,7 @@ function getScrollTop(){
                         div.style.borderWidth = "1px";
                         //console.log(getScrollTop());
                         //console.log($(window).height());
-                        div.style.height = "70vh";
+                        div.style.height = "80vh";
                        // console.log(div.style.height);
                         div.style.width = "30%";
                         div.style.zIndex = 9999;
